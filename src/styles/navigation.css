@@ -1,6 +1,6 @@
 /* #1d1d1b */
 .navigation--container {
-    background-color: #0000 ;
+    background-color: #0000;
     position: fixed;
     right: 0;
     margin-right: 0;
@@ -41,7 +41,7 @@
 .navigation--links--container {
     display: flex;
     flex-direction: column;
-    height: 40%;
+    height: 30%;
     justify-content: space-around;
     padding-left: 2em;
     margin-bottom: 6em;
@@ -63,10 +63,10 @@
     transition: transform 2.5s ease-in-out, opacity 1.5s;
     opacity: 1;
     transform: translateX(0%);
-
 }
 
 .navigation--link--container:hover {
+    transition: all .5s ease-in-out;
     transform: translateX(12%);
 }
 

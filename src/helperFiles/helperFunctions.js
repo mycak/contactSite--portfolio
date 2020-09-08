@@ -49,9 +49,8 @@ export const removeAnimation = () => {
 };
 
 
-export const spyMenu = () => {
+export const spyMenuActive = () => {
     document.addEventListener('DOMContentLoaded', function(){
-        console.log('essa')
         const sections = document.querySelectorAll('.section');
         const menu_links = document.querySelectorAll('.navigation--link--container a');
         const makeActive = (link) => menu_links[link].classList.add("navLink--active");
@@ -59,6 +58,7 @@ export const spyMenu = () => {
         const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
         const sectionMargin = 200;
         let currentActive = 0;
+        document.querySelector('.navigation--link--container a').classList.add('navLink--active');
 
   // listen for scroll events
         window.addEventListener("scroll", () => {

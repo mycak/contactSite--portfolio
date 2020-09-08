@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/navigation.css';
-import {countPercentScrolledSite, spyMenu} from '../helperFiles/helperFunctions';
+import {countPercentScrolledSite, spyMenuActive} from '../helperFiles/helperFunctions';
 
 
 const Navigation = () => {
-    spyMenu();
+    spyMenuActive();
 
     const [percScrolled, setPercScrolled] = useState(0);
 
@@ -45,7 +45,7 @@ const Navigation = () => {
                     <p>Piotr Myszkiewicz</p>
                 </div>
                 <div className="navigation--links--container">
-                    <div className="navigation--link--container"><a href="#header" >Główna</a></div>
+                    <div className="navigation--link--container"><a href="#header">Główna</a></div>
                     <div className="navigation--link--container"><a href="#projects">Projekty</a></div>
                     <div className="navigation--link--container"><a href="#stack">Stack</a></div>
                     <div className="navigation--link--container"> <a href="#interests">O mnie</a></div>

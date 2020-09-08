@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/header.css';
 import img from '../helperFiles/images/1.png'
 
 const Header = () => {
+
+    const handleVisibility = (e) => {
+        const headerTextDivs = document.querySelector('.header--text--container').children;
+        const headerPicDiv = document.querySelector('.header--pic--container');
+        const scrollY = window.scrollY;
+        const headerBottom =  document.querySelector('#header').offsetHeight;
+        if (scrollY === 0) return;
+        if (scrollY > .6*headerBottom) {
+            [...headerTextDivs].forEach(div => div.classList.remove('active'));
+            headerPicDiv.classList.remove('active');
+        } else {
+            [...headerTextDivs].forEach(div => div.classList.add('active'));
+            headerPicDiv.classList.add('active');
+        }
+
+        
+    }
+
+    useEffect (() => {
+        document.addEventListener('scroll', handleVisibility);
+        return () => document.removeEventListener('scroll', handleVisibility)
+    },[])
+
     return (
-        <section className="section" id="header">
+        <section className="section section--header" id="header">
             <header className="header--container">
                 <div className="header--leftside--container">
 
@@ -12,7 +35,7 @@ const Header = () => {
                 <div className="header--main--container">
                     <div className="header--text--container">
                         <div className="header--title">
-                            <h1><span className="gradient-text">Piotr Myszkiewicz</span></h1>
+                            <p><span className="gradient-text">Piotr Myszkiewicz</span></p>
                         </div>
                         <div className="header--subtitle">
                             <p>Front-end Developer</p>
