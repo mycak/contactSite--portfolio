@@ -1,59 +1,56 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import '../styles/navigation.css';
 import {countPercentScrolledSite, spyMenuActive} from '../helperFiles/helperFunctions';
+import { connect } from 'react-redux';
 
 
-const Navigation = () => {
+const Navigation = ({isMainActive, scrollY}) => {
+    const showProgressBar = (perc) => document.documentElement.style.setProperty('--perc', perc + '%');
+    const navigationLinks = useRef(null);
+    let perc = countPercentScrolledSite(scrollY);
     spyMenuActive();
+    showProgressBar(perc);
 
-    const [percScrolled, setPercScrolled] = useState(0);
+    const inOutProgressBar = (perc > 1 && perc < 99) ? 'in':'';
+    const inOutSignature = (perc > 20) ? 'active' : '';
 
-    const showProgressBar = (perc) => {
-            document.documentElement.style.setProperty('--perc', perc + '%');
-            if (perc > 1 && perc < 99) {
-                document.querySelector('.progressBar--container').classList.add('in');
-            } else {
-                document.querySelector('.progressBar--container').classList.remove('in')
-            }
+
+    const scrollToSection = (e) => {
+        e.preventDefault();
+        document.querySelector(e.target.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        })
     }
-
-    const showSignature = perc => {
-        if (perc > 20) {
-            document.querySelector('.signature--container').classList.add('active');
-        } else {
-            document.querySelector('.signature--container').classList.remove('active');
-
-        }
-    }
-
-    useEffect (() => {
-        window.addEventListener('scroll', () => setPercScrolled(countPercentScrolledSite()));
-        showProgressBar(percScrolled);
-        showSignature(percScrolled);
-    },[percScrolled]);
 
     return (
         <nav className="navigation--container">
-            <div className="progressBar--container">
+            <div className={`progressBar--container ${inOutProgressBar}`}>
                 <div className="progressBar"></div>
                 <div className="progressBar--percentage">
-                    {percScrolled + '%'}
+                    {perc + '%'}
                 </div>
             </div>
             <div className="navigation--text--container">
-                <div className="signature--container">
+                <div className={`signature--container ${inOutSignature}`}>
                     <p>Piotr Myszkiewicz</p>
                 </div>
-                <div className="navigation--links--container">
-                    <div className="navigation--link--container"><a href="#header">Główna</a></div>
-                    <div className="navigation--link--container"><a href="#projects">Projekty</a></div>
-                    <div className="navigation--link--container"><a href="#stack">Stack</a></div>
-                    <div className="navigation--link--container"> <a href="#interests">O mnie</a></div>
-                    <div className="navigation--link--container"><a href="#contact">Kontakt</a></div>
+                <div className={`navigation--links--container ${isMainActive? 'in':''}`} useref={navigationLinks}>
+                    <div className="navigation--link--container"><a href="#header" onClick={scrollToSection}>Główna</a></div>
+                    <div className="navigation--link--container"><a href="#projects" onClick={scrollToSection}>Projekty</a></div>
+                    <div className="navigation--link--container"><a href="#stack" onClick={scrollToSection}>Stack</a></div>
+                    <div className="navigation--link--container"> <a href="#interests" onClick={scrollToSection}>O mnie</a></div>
+                    <div className="navigation--link--container"><a href="#contact" onClick={scrollToSection}>Kontakt</a></div>
                 </div>
             </div>
         </nav>
     )
-}
+};
 
-export default Navigation;
+
+const mapStateToProps = (state) => {
+    return {
+        scrollY: state
+    }
+};
+
+export default connect(mapStateToProps)(Navigation);

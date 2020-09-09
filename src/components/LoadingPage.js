@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../styles/loadingPage.css';
 
 const LoadingPage = () => {
+
+    const loadingPage = useRef(null);
+    const animatedSvg = useRef(null);
+
+
+
+    useEffect (()=> {
+        setInterval(()=>{
+            loadingPage.current.classList.add('active');
+            animatedSvg.current.classList.add('exit');
+            setTimeout(() => {
+                loadingPage.current.classList.remove('active');
+                setTimeout(() => {
+                    animatedSvg.current.classList.remove('exit');
+                    setTimeout(()=> {
+                        loadingPage.current.remove();
+                    },500)
+                },1000)
+            },3000)
+        },1000);
+    })
+
+
     return (
-        <div className="loadingPage--container">
+        <div className="loadingPage--container" ref={loadingPage}>
             <div className="cube--container">
-                <svg id="loading" viewBox="0 0 100 80" className="svg">
+                <svg id="loading" viewBox="0 0 100 80" className="svg" ref={animatedSvg}>
                     <defs>
                     <linearGradient id="gradient" x1="100%" y1="0%" x2="0%" y2="100%">
                         <stop offset="0%" stopColor="#4383b8" />

@@ -45,6 +45,15 @@
     justify-content: space-around;
     padding-left: 2em;
     margin-bottom: 6em;
+    opacity: 0;
+    transform: translateX(25%);
+    transition: opacity 1s ease-in-out .5s, transform 1.4s ease .5s;
+}
+
+.navigation--links--container.in {
+    transition: opacity 1s ease-in-out .5s, transform 1.4s ease .5s;
+    opacity: 1;
+    transform: translateX(0%);
 }
 
 .navigation--links--container a {
@@ -55,14 +64,6 @@
 
 .navigation--link--container {
     transition: all .5s ease-in-out;
-    opacity: 0;
-    transform: translateX(25%);
-}
-
-.navigation--link--container.in {
-    transition: transform 2.5s ease-in-out, opacity 1.5s;
-    opacity: 1;
-    transform: translateX(0%);
 }
 
 .navigation--link--container:hover {

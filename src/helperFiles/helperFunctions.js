@@ -1,53 +1,10 @@
-export const countPercentScrolledSite = () => {
+export const countPercentScrolledSite = (scrollY) => {
     const heightWindow = window.innerHeight;
     const heightSite = parseInt(window.getComputedStyle(document.querySelector('html')).height);
-    const perc =(window.scrollY / (heightSite-heightWindow))*100;
+    const perc =(scrollY / (heightSite-heightWindow))*100;
     const percRounded = Math.round(perc);
     return percRounded;
 }
-const setup = () => {
-    const headerTextDivs = document.querySelector('.header--text--container').children;
-    const headerPicDiv = document.querySelector('.header--pic--container');
-    const navigationlinks = document.querySelectorAll('.navigation--link--container');
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-    [...headerTextDivs].forEach(div => div.classList.add('active'));
-    headerPicDiv.classList.add('active');
-    navigationlinks.forEach(link => link.classList.add('in'));
-}
-
-export const removeAnimation = () => {
-    setTimeout(() => {
-        const loadingPage = document.querySelector('.loadingPage--container');
-        const animatedSvg = document.querySelector('.svg');
-        const siteContainer = document.querySelector('.site--container');
-
-        loadingPage.classList.add('active');
-        animatedSvg.classList.add('exit');
-        setTimeout(() => {
-            loadingPage.classList.remove('active');
-            setTimeout(() => {
-                animatedSvg.classList.remove('exit');
-                setTimeout(()=> {
-                    loadingPage.remove();
-                    siteContainer.classList.add('visible');
-                    setTimeout(()=> {
-                        setup();
-                    },500)
-                },500)
-            },1000)
-        },3000)
-    },1000)
-};
-
 
 export const spyMenuActive = () => {
     document.addEventListener('DOMContentLoaded', function(){

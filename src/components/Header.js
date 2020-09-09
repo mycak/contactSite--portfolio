@@ -4,6 +4,14 @@ import img from '../helperFiles/images/1.png'
 
 const Header = () => {
 
+    const setup = () => {
+        const headerTextDivs = document.querySelector('.header--text--container').children;
+        const headerPicDiv = document.querySelector('.header--pic--container');
+        [...headerTextDivs].forEach(div => div.classList.add('active'));
+        headerPicDiv.classList.add('active');
+    }
+    
+
     const handleVisibility = (e) => {
         const headerTextDivs = document.querySelector('.header--text--container').children;
         const headerPicDiv = document.querySelector('.header--pic--container');
