@@ -40,7 +40,3 @@
     display: flex;
     flex-direction: column;
   }
-
-  .section--projects {
-    height: 100vh;
-  }

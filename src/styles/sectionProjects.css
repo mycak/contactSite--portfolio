@@ -1,0 +1,57 @@
+.section--projects {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    min-height: 100vh;
+}
+
+.projects--leftside--container {
+    flex: .5;
+    background-color:#2f2f2b;
+    width: 100%;
+    min-height: 100%;
+    min-width: 5vw;
+    transition: all .5s;
+}
+
+.projects--leftside--container.active {
+    flex: 8;
+}
+
+.projects--rightside--container {
+    flex: 8;
+    margin-bottom: 10em;
+}
+.projects--pics--container {
+    margin-top: 10em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.projects--pic--container {
+    margin: 10em;
+    width: 75%;
+}
+
+.projects--pic--container img{
+    width: 100%;
+    height: auto;
+}
+
+.project--text--container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    border: solid red;
+}
+
+.project--text--container.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

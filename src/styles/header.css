@@ -13,10 +13,20 @@
 }
 
 .header--leftside--container {
+  transform: translateX(-100%);
   flex: .5;
-  background-color: #1d1d1a;
+  background-color: #2f2f2b;
   height: 100%;
   min-width: 5vw;
+  transition: all .5s;
+}
+
+.header--leftside--container.active {
+  transform: translateX(0%);
+}
+.header--leftside--container.roll {
+  flex: 8;
+  min-width: 50%;
 }
 
 .header--main--container {
@@ -41,7 +51,7 @@
   font-size: 5em;
   font-weight: 700;
   width: 80%;
-  transition: transform 1s ease-out, opacity 2s;
+  transition: transform 1s ease-out 1.5s, opacity 2s ease 1.5s;
 }
 
 .header--subtitle {
@@ -50,16 +60,16 @@
   opacity: 0;
   font-size: 3em;
   transform: translateX(-20%);
-  transition: transform 1s ease-out, opacity 2.2s;
+  transition: transform 1s ease-out 1.5s, opacity 2.2s  ease 1.5s;
 }
 
-.header--decription {
+.header--description {
   width: 90%;
   opacity: 0;
   margin-top: 1em;
   color: #fff;
-  transform: translateX(-10%);
-  transition: transform 1.2s ease-out, opacity 1.4s;
+  transform: translateX(-5%);
+  transition: transform 1.6s ease-out 1s, opacity 1.4s ease 1.5s;
 }
 
 .header--pic--container {
@@ -68,8 +78,8 @@
   flex-direction: column;
   justify-content: center;
   opacity: 0;
-  transform: translateY(8%);
-  transition: transform 1.9s ease-out, opacity .4s;
+  transform: translateY(3%);
+  transition: transform 1.9s ease-out 1.5s, opacity .4s ease 1.5s;
 }
 
 .header--pic--container img {
@@ -87,7 +97,7 @@
   transform: translateX(0%);
 }
 
-.header--decription.active {
+.header--description.active {
   opacity: 1;
   transform: translateX(0%);
 }

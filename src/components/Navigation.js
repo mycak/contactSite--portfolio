@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import '../styles/navigation.css';
 import {countPercentScrolledSite, spyMenuActive} from '../helperFiles/helperFunctions';
 import { connect } from 'react-redux';

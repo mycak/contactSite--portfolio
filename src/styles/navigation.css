@@ -46,7 +46,7 @@
     padding-left: 2em;
     margin-bottom: 6em;
     opacity: 0;
-    transform: translateX(25%);
+    transform: translateX(45%);
     transition: opacity 1s ease-in-out .5s, transform 1.4s ease .5s;
 }
 

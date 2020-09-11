@@ -6,11 +6,16 @@ import '../styles/app.css';
 import LoadingPage from './LoadingPage';
 import Header from './Header';
 import Navigation from './Navigation';
+import SectionProjects from './SectionProjects';
 
 const App = (props) => {
 
     const siteContainer = useRef(null);
     const [mainActive, setMainActive] = useState(false);
+    const handleScroll= () => {
+        const scroll = Math.round(window.scrollY);
+        props.dispatch({type: 'SCROLLY', payload: scroll})
+    }
 
     useEffect(()=>{
         setTimeout(()=>{
@@ -20,11 +25,6 @@ const App = (props) => {
             },100)
         },5500)
     },[]);
-
-    const handleScroll= () => {
-        const scroll = Math.round(window.scrollY);
-        props.dispatch({type: 'SCROLLY', payload: scroll})
-    }
 
     useEffect(()=> {
         window.addEventListener('scroll', handleScroll)
@@ -37,11 +37,9 @@ const App = (props) => {
         <div className="app--container">
             <LoadingPage />
             <div className="site--container" ref={siteContainer}>
-                <Header />
+                <Header isMainActive={mainActive}/>
                 <Navigation isMainActive={mainActive} />
-                <section id="projects" className="section section--projects">
-                    <p>essa</p>
-                </section>
+                <SectionProjects />
                 <section id="stack" className="section section--projects">
                     <p>essa</p>
                 </section>
