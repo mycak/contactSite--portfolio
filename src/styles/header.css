@@ -2,7 +2,6 @@
   width: 85%;
   height: 100vh;
   max-width: 85%;
-
 }
 
 .header--container {
@@ -33,6 +32,7 @@
   flex: 8;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .header--text--container {
@@ -73,11 +73,15 @@
 }
 
 .header--pic--container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-left: 1em;
+  width: 50%;
+  height: 70%;
+  border-radius: 50%;
   opacity: 0;
+  background-image: url('../helperFiles/images/portrait.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   transform: translateY(3%);
   transition: transform 1.9s ease-out 1.5s, opacity .4s ease 1.5s;
 }

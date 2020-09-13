@@ -29,14 +29,17 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
 }
 
 .projects--pic--container {
+    margin-left: 20em;
     margin: 10em;
-    width: 75%;
+    width: 85%;
 }
 
 .projects--pic--container img{
+    margin-left: 1em;
     width: 100%;
     height: auto;
 }
@@ -47,11 +50,21 @@
     top: 0;
     left: 0;
     height: 100vh;
-    border: solid red;
 }
 
 .project--text--container.active {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.changingText--container {
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: all .5s;
+}
+
+.changingText--container.active {
+    opacity: 1;
+    transform: translateY(0%);
 }
