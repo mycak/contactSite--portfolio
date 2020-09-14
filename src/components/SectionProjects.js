@@ -25,6 +25,8 @@ const SectionProjects = ({scrollY}) => {
      
 
     if (scrollY>400) {
+
+        // 
         let activePic = null;
         const projectPics = [...picturesContainer.current.children];
         const distanseBetweenPics = firstPic.current.offsetTop - projectsContainerTop;
