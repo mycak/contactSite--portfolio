@@ -40,10 +40,13 @@ const SectionProjects = () => {
 
     const handleScroll = ()=> {
             if(window.scrollY >= .9*projectsContainerTop) {
-                setIsSectionActive(true);
                 SetIsTextActive(true);
             } else {
-                setIsSectionActive(false);
+                SetIsTextActive(false);
+            }
+            if(window.scrollY >= projectsContainerTop) {
+                SetIsTextActive(true);
+            } else {
                 SetIsTextActive(false);
             }
             if (window.scrollY > 4800) SetIsTextActive(false);
