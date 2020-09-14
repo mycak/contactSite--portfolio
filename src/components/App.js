@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { connect } from 'react-redux';
 import '../styles/app.css';
 
 
@@ -8,14 +7,9 @@ import Header from './Header';
 import Navigation from './Navigation';
 import SectionProjects from './SectionProjects';
 
-const App = (props) => {
-
+const App = () => {
     const siteContainer = useRef(null);
     const [mainActive, setMainActive] = useState(false);
-    const handleScroll= () => {
-        const scroll = Math.round(window.scrollY);
-        props.dispatch({type: 'SCROLLY', payload: scroll})
-    }
 
     useEffect(()=>{
         setTimeout(()=>{
@@ -25,13 +19,6 @@ const App = (props) => {
             },100)
         },5500)
     },[]);
-
-    useEffect(()=> {
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    })
-
-
 
     return (
         <div className="app--container">
@@ -53,10 +40,5 @@ const App = (props) => {
         </div>
     )
 }
-const mapStateToProps = (state) => {
-    return {
-        scrollY: state
-    }
-}
 
-export default connect(mapStateToProps)(App);
+export default App;

@@ -1,40 +1,47 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/navigation.css';
 import {countPercentScrolledSite, spyMenuActive} from '../helperFiles/helperFunctions';
-import { connect } from 'react-redux';
 
 
-const Navigation = ({isMainActive, scrollY}) => {
-    const showProgressBar = (perc) => document.documentElement.style.setProperty('--perc', perc + '%');
-    const navigationLinks = useRef(null);
-    let perc = countPercentScrolledSite(scrollY);
+
+const Navigation = ({isMainActive}) => {
+    const [scrollPercentage, setScrollPercentage] = useState(0);
     spyMenuActive();
-    showProgressBar(perc);
 
-    const inOutProgressBar = (perc > 1 && perc < 99) ? 'in':'';
-    const inOutSignature = (perc > 20) ? 'active' : '';
+    useEffect(()=> {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    })
 
+    useEffect (()=>{
+        showProgressBar(scrollPercentage);
+    },[scrollPercentage])
 
-    const scrollToSection = (e) => {
+    const handleScroll = () => setScrollPercentage(countPercentScrolledSite(window.scrollY));
+    const showProgressBar = (perc) => document.documentElement.style.setProperty('--perc', perc + '%');
+    const scrollToSection = e => {
         e.preventDefault();
         document.querySelector(e.target.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         })
     }
 
+    const inOutProgressBar = (scrollPercentage > 1 && scrollPercentage < 99) ? 'in':'';
+    const inOutSignature = (scrollPercentage > 20) ? 'active' : '';
+
     return (
         <nav className="navigation--container">
             <div className={`progressBar--container ${inOutProgressBar}`}>
                 <div className="progressBar"></div>
                 <div className="progressBar--percentage">
-                    {perc + '%'}
+                    {scrollPercentage + '%'}
                 </div>
             </div>
             <div className="navigation--text--container">
                 <div className={`signature--container ${inOutSignature}`}>
-                    <p>PM</p>
+                    <p>Piotr Myszkiewicz</p>
                 </div>
-                <div className={`navigation--links--container ${isMainActive? 'in':''}`} useref={navigationLinks}>
+                <div className={`navigation--links--container ${isMainActive? 'in':''}`} >
                     <div className="navigation--link--container"><a href="#header" onClick={scrollToSection}>Główna</a></div>
                     <div className="navigation--link--container"><a href="#projects" onClick={scrollToSection}>Projekty</a></div>
                     <div className="navigation--link--container"><a href="#stack" onClick={scrollToSection}>Stack</a></div>
@@ -46,11 +53,4 @@ const Navigation = ({isMainActive, scrollY}) => {
     )
 };
 
-
-const mapStateToProps = (state) => {
-    return {
-        scrollY: state
-    }
-};
-
-export default connect(mapStateToProps)(Navigation);
+export default Navigation;
