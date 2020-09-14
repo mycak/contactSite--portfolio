@@ -20,7 +20,7 @@
 
 .projects--rightside--container {
     flex: 8;
-    margin-bottom: 10em;
+    margin-bottom: 25em;
 }
 .projects--pics--container {
     margin-top: 10em;
@@ -62,7 +62,7 @@
 .changingText--container {
     opacity: 0;
     transform: translateY(-100px);
-    transition: transform .1s, opacity .05s;
+    transition: transform .2s, opacity .1s;
 }
 
 .changingText--container.active {

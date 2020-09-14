@@ -32,7 +32,7 @@ const Navigation = ({isMainActive, scrollY}) => {
             </div>
             <div className="navigation--text--container">
                 <div className={`signature--container ${inOutSignature}`}>
-                    <p>Piotr Myszkiewicz</p>
+                    <p>PM</p>
                 </div>
                 <div className={`navigation--links--container ${isMainActive? 'in':''}`} useref={navigationLinks}>
                     <div className="navigation--link--container"><a href="#header" onClick={scrollToSection}>Główna</a></div>

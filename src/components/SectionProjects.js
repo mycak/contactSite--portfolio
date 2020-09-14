@@ -25,16 +25,11 @@ const SectionProjects = ({scrollY}) => {
      
 
     if (scrollY>400) {
-
-        // 
         let activePic = null;
         const projectPics = [...picturesContainer.current.children];
         const distanseBetweenPics = firstPic.current.offsetTop - projectsContainerTop;
-        const picHeight = projectPics[0].offsetHeight;
-        const picTop = projectPics[0].offsetTop;
         projectPics.forEach(function(pic, i){
-            const top = picTop + picHeight * i + distanseBetweenPics * i;
-            if (scrollY > top - .5*distanseBetweenPics - 10 && scrollY < top + picHeight) {
+            if (pic.getBoundingClientRect().top <= .7*distanseBetweenPics && pic.getBoundingClientRect().top + .6*pic.offsetHeight>=0) {
                 activePic = i;
             }
         })
