@@ -32,6 +32,7 @@
 .header--text--container {
   margin-top: -2em;
   margin-left: 8em;
+  margin-right: 1em;
   width: 45%;
   height: 100%;
   display: flex;

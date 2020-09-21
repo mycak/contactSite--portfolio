@@ -6,6 +6,7 @@ import LoadingPage from './LoadingPage';
 import Header from './Header';
 import Navigation from './Navigation';
 import SectionProjects from './SectionProjects';
+import SectionStack from './SectionStack';
 
 const App = () => {
     const siteContainer = useRef(null);
@@ -27,9 +28,7 @@ const App = () => {
                 <Header isMainActive={mainActive}/>
                 <Navigation isMainActive={mainActive} />
                 <SectionProjects />
-                <section id="stack" className="section section--projects">
-                    <p>essa</p>
-                </section>
+                <SectionStack />
                 <section id="interests" className="section section--projects">
                     <p>essa</p>
                 </section>

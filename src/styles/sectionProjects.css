@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     width: 85%;
-    min-height: 100vh;
+    min-height: 600vh;
 }
 
 .projects--leftside--container {
@@ -22,8 +22,22 @@
     flex: 8;
     margin-bottom: 25em;
 }
+
+.projects--title--container {
+    opacity: 0;
+    transition: all .8s;
+}
+
+.projects--title--container.active {
+    opacity: 1;
+}
+
+.projects--rightside--container h2{
+    margin-top: 4em;
+    font-size: 4em;
+}
+
 .projects--pics--container {
-    margin-top: 10em;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -60,6 +74,8 @@
 }
 
 .changingText--container {
+    margin: auto;
+    width: 80%;
     opacity: 0;
     transform: translateY(-100px);
     transition: transform .2s, opacity .1s;
@@ -68,4 +84,5 @@
 .changingText--container.active {
     opacity: 1;
     transform: translateY(0);
+    transition: transform .2s, opacity .1s;
 }

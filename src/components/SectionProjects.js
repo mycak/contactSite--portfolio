@@ -9,17 +9,19 @@ import { projectSectionText } from '../helperFiles/dataText'
 
 
 const SectionProjects = () => {
-    console.log('proj')
     const [isSectionActive, setIsSectionActive] = useState(false);
     const [isTextActive, SetIsTextActive] = useState(false);
     const [activePic, setActivePic] = useState(null);
+
     const projectsContainer = useRef(null);
     const picturesContainer = useRef(null);
     const leftSideContainer = useRef(null);
     const leftSideTextContainer = useRef(null);
     const changingTextContainer = useRef(null);
-    const projectsContainerTop = (projectsContainer.current) ? projectsContainer.current.offsetTop : '';
     const firstPic = useRef(null);
+
+    const projectsContainerTop = (projectsContainer.current) ? projectsContainer.current.offsetTop : '';
+
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -33,39 +35,41 @@ const SectionProjects = () => {
                 changingTextContainer.current.innerHTML = projectSectionText[activePic];
                 changingTextContainer.current.classList.add('active');
             },100)
-            
+        } else {
+            changingTextContainer.current.classList.remove('active');
         }
     },[activePic])
 
 
     const handleScroll = ()=> {
-            if(window.scrollY >= .9*projectsContainerTop) {
-                SetIsTextActive(true);
-            } else {
-                SetIsTextActive(false);
-            }
-            if(window.scrollY >= projectsContainerTop) {
-                SetIsTextActive(true);
-            } else {
-                SetIsTextActive(false);
-            }
-            if (window.scrollY > 4800) SetIsTextActive(false);
-            if (window.scrollY > 400) {
-                const projectPics = [...picturesContainer.current.children];
-                const distanseBetweenPics = firstPic.current.offsetTop - projectsContainerTop;
-                projectPics.forEach(function(pic, i){
-                    if (pic.getBoundingClientRect().top <= .7*distanseBetweenPics && pic.getBoundingClientRect().top + .6*pic.offsetHeight>=0) {
-                        setActivePic(i);
-                    }
-                })
-            }
+        if(window.scrollY >= .9*projectsContainerTop) {
+            SetIsTextActive(true);
+            setIsSectionActive(true);
+        } else {
+            SetIsTextActive(false);
+            setIsSectionActive(false);
         }
+
+        if (window.scrollY > 300 && window.scrollY < 4800) {
+            const projectPics = [...picturesContainer.current.children];
+            const distanseBetweenPics = firstPic.current.offsetTop - projectsContainerTop;
+            projectPics.forEach(function(pic, i){
+                if (pic.getBoundingClientRect().top <= .7*distanseBetweenPics && pic.getBoundingClientRect().top + .6*pic.offsetHeight>=0) {
+                    setActivePic(i);
+                }
+            })
+        } else setActivePic(null)
+        if (window.scrollY<projectsContainerTop + 100) setActivePic(null);
+        if (window.scrollY > projectsContainerTop + projectsContainer.current.offsetHeight - window.innerHeight) {
+            SetIsTextActive(false);
+        }
+    }
 
     const isActiveSection = isSectionActive ? 'active' : '';
     const isActiveText = isTextActive ? 'active' : '';
 
     return (
-        <section id="projects" className="section section--projects" ref={projectsContainer}>
+        <section className="section section--projects" ref={projectsContainer}>
             <div className={`projects--leftside--container ${isActiveSection}`} ref={leftSideContainer}>
                 <div className={`project--text--container ${isActiveText}`} ref={leftSideTextContainer}>
                     <div className="changingText--container" ref={changingTextContainer}>
@@ -73,8 +77,11 @@ const SectionProjects = () => {
                 </div>
             </div>
             <div className="projects--rightside--container">
+                <div className={`projects--title--container ${isActiveText}`} id="projects" >
+                    <h2>Projekty</h2>
+                </div>
                 <div className="projects--pics--container" ref={picturesContainer}>
-                    <div className="projects--pic--container" data-id="0" ref={firstPic}>
+                    <div className="projects--pic--container" data-id="0" ref={firstPic} >
                         <img src={img1} alt="proj"></img>
                     </div>
                     <div className="projects--pic--container" data-id="1">
