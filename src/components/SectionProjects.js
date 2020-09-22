@@ -24,10 +24,13 @@ const SectionProjects = () => {
 
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', menageClasses);
+        return () => window.removeEventListener('scroll', menageClasses);
     });
-
+    useEffect(() => {
+        window.addEventListener('scroll', menageText);
+        return () => window.removeEventListener('scroll', menageText);
+    });
     useEffect(()=>{
         if(activePic !== null){
             changingTextContainer.current.classList.remove('active');
@@ -40,17 +43,8 @@ const SectionProjects = () => {
         }
     },[activePic])
 
-
-    const handleScroll = ()=> {
-        if(window.scrollY >= .9*projectsContainerTop) {
-            SetIsTextActive(true);
-            setIsSectionActive(true);
-        } else {
-            SetIsTextActive(false);
-            setIsSectionActive(false);
-        }
-
-        if (window.scrollY > 300 && window.scrollY < 4800) {
+    const menageText = () => {
+        if (window.scrollY > projectsContainerTop + 100 && window.scrollY < 4100) {
             const projectPics = [...picturesContainer.current.children];
             const distanseBetweenPics = firstPic.current.offsetTop - projectsContainerTop;
             projectPics.forEach(function(pic, i){
@@ -58,11 +52,12 @@ const SectionProjects = () => {
                     setActivePic(i);
                 }
             })
-        } else setActivePic(null)
-        if (window.scrollY<projectsContainerTop + 100) setActivePic(null);
-        if (window.scrollY > projectsContainerTop + projectsContainer.current.offsetHeight - window.innerHeight) {
-            SetIsTextActive(false);
-        }
+        } else setActivePic(null);
+    }
+
+    const menageClasses = () => {
+        (window.scrollY >= .9*projectsContainerTop) ? setIsSectionActive(true):setIsSectionActive(false);
+        (window.scrollY >= .9*projectsContainerTop && window.scrollY < 4200) ? SetIsTextActive(true) : SetIsTextActive(false);
     }
 
     const isActiveSection = isSectionActive ? 'active' : '';

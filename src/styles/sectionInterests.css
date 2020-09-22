@@ -1,0 +1,27 @@
+.section--interests {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    min-height: 200vh;
+}
+
+.interests--leftside--container {
+    background-color:#2f2f2b;
+    width: 50%;
+    min-height: 100%;
+    transition: all 1s;
+}
+
+.interests--rightside--container {
+    width: 50%;
+    min-height: 100%;
+    transition: all 1s;
+}
+
+.interests--leftside--container.active {
+    width: 100%;
+}
+
+.interests--rightside--container.active {
+    width: 0%;
+}

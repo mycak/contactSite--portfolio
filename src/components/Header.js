@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import '../styles/header.css';
 
 const Header = ({isMainActive}) => {
-
     const header = useRef(null);
     const headerBottom = header.current? header.current.offsetHeight : '';
     const [isContentActive, setIsContentActive] = useState(false);

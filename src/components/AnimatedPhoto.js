@@ -11,7 +11,6 @@ const AnimatedPhoto = ({img, text}) => {
                     <p>{text.p1}</p>
                     <p>{text.p2}</p>
                     <p>{text.p3}</p>
-                    <a href="#">View more</a>
                 </figcaption>
             </figure>
         </div>

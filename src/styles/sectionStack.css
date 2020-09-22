@@ -1,8 +1,8 @@
 .section--stack {
+    height: 250vh;
     display: flex;
     flex-direction: row;
     width: 85%;
-    justify-content: space-around;
 }
 
 .stack--leftside--container {
@@ -10,6 +10,7 @@
     min-height: 100%;
     background-color:#2f2f2b;
     transition: all 1s;
+    padding-bottom: 22em;
 }
 
 .stack--rightside--container {
@@ -19,6 +20,17 @@
 
 .stack--header--container {
     margin-top: 4em;
+    opacity: 0;
+    transform: translateX(-10%);
+    transform: rotate(10deg);
+    transition: all .6s;
+}
+
+.stack--header--container.active {
+    opacity: 1;
+    transform: translateX(0%);
+    transform: rotate(0deg);
+    margin-left: 2em;
 }
 
 .stack--header--container h2 {
@@ -31,6 +43,27 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.leftside--pic--container {
+    margin-top: 5em;
+}
+
+.rightside--pic--container {
+    margin-top: 2em;
+    justify-content: flex-start;
+}
+
+.leftside--pic--container.out, .rightside--pic--container.out {
+    display: none
+}
+
+.stack--rightside--container.out {
+    width: 0%;
+}
+
+.stack--leftside--container.out {
+    width: 100%;
 }
 
 /* .stack--leftside--container.active {

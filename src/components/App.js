@@ -7,6 +7,7 @@ import Header from './Header';
 import Navigation from './Navigation';
 import SectionProjects from './SectionProjects';
 import SectionStack from './SectionStack';
+import SectionInterests from './SectionInterests';
 
 const App = () => {
     const siteContainer = useRef(null);
@@ -29,9 +30,7 @@ const App = () => {
                 <Navigation isMainActive={mainActive} />
                 <SectionProjects />
                 <SectionStack />
-                <section id="interests" className="section section--projects">
-                    <p>essa</p>
-                </section>
+                <SectionInterests />
                 <section id="contact" className="section section--projects">
                     <p>contact</p>
                 </section>

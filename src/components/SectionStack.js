@@ -8,7 +8,9 @@ import img2 from '../helperFiles/images/css.jpeg';
 import img3 from '../helperFiles/images/git.png';
 
 const SectionStack = () => {
-    const [isSectionActive, setIsSectionActive] = useState(false)
+    const [isSectionActive, setIsSectionActive] = useState(false);
+    const [isSectionPassed, setIsSectionPassed] = useState(false);
+    console.log(isSectionPassed)
     const stackSection = useRef(null);
     const leftSide = useRef(null);
     const rightSide = useRef(null);
@@ -19,15 +21,14 @@ const SectionStack = () => {
     })
 
     const handleScroll = () => {
-
-        window.scrollY >= stackSection.current.offsetTop -1 ? setIsSectionActive(true) : setIsSectionActive(false);
+        window.scrollY >= stackSection.current.offsetTop -200 ? setIsSectionActive(true):setIsSectionActive(false);
+        (window.scrollY > stackSection.current.offsetTop + stackSection.current.offsetHeight-100) ? setIsSectionPassed(true):setIsSectionPassed(false);
         if(window.scrollY>4000){
             const allPics = [...leftSide.current.children, ...rightSide.current.children];
-            console.log(allPics)
             allPics.forEach(pic => {
                 const top = pic.offsetTop;
-                const height = pic.offsetHeight;
-                if(window.scrollY + 300> top ) {
+                const bottom = pic.offsetTop + pic.offsetHeight;
+                if(window.scrollY + 300> top && window.scrollY < bottom) {
                     pic.classList.add('active')
                 } else {
                     pic.classList.remove('active')
@@ -37,19 +38,20 @@ const SectionStack = () => {
     };
 
     const isActiveSection = isSectionActive ? 'active':'';
+    const isPassedSection = isSectionPassed ? 'out' : '';
     return (
         <section id="stack" className="section section--stack" ref={stackSection}>
-            <div className={`stack--leftside--container ${isActiveSection}`}>
-                <div className="stack--header--container">
+            <div className={`stack--leftside--container ${isPassedSection}`}>
+                <div className={`stack--header--container ${isActiveSection}`}>
                     <h2>Stack</h2>
                 </div>
-                <div className="leftside--pic--container" ref={leftSide}>
+                <div className={`leftside--pic--container ${isPassedSection}`} ref={leftSide}>
                     <AnimatedPhoto img={img0} text={stackSectionText[0]} />
                     <AnimatedPhoto img={img1} text={stackSectionText[1]} />
                 </div>
             </div>
-            <div className={`stack--rightside--container ${isActiveSection}`}>
-                <div className="rightside--pic--container" ref={rightSide}>
+            <div className={`stack--rightside--container ${isPassedSection}`}>
+                <div className={`rightside--pic--container ${isPassedSection}`} ref={rightSide}>
                     <AnimatedPhoto img={img2} text={stackSectionText[2]}/>
                     <AnimatedPhoto img={img3} text={stackSectionText[3]}/>
                 </div>
