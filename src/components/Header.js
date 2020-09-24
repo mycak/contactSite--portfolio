@@ -43,7 +43,7 @@ const Header = ({isMainActive}) => {
                             <p>Front-end Developer</p>
                         </div>
                         <div className={`header--description ${isActiveHeader2}`}>
-                            <p>Voluptate sit occaecat irure adipisicing et id deserunt qui <span className="highlighted-text">duis</span> duis velit elit velit laboris. Minim incididunt minim ullamco <span className="highlighted-text">consequat</span> nostrud consequat exercitation. Enim anim non dolor et proident ut officia.Nisi mollit aliquip nisi aliquip occaecat <span className="highlighted-text">laboris</span> deserunt</p>
+                            <p>Hello ! I'm <span className="highlighted-text">31</span> years old front-end developer living in <span className="highlighted-text">Warsaw</span>. I search opportunity to develop mysefl during creating and designing websites.</p>
                         </div>
                     </div>
                     <div className={`header--pic--container ${isActiveHeader2}`}>

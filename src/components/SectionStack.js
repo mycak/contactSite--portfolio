@@ -10,7 +10,6 @@ import img3 from '../helperFiles/images/git.png';
 const SectionStack = () => {
     const [isSectionActive, setIsSectionActive] = useState(false);
     const [isSectionPassed, setIsSectionPassed] = useState(false);
-    console.log(isSectionPassed)
     const stackSection = useRef(null);
     const leftSide = useRef(null);
     const rightSide = useRef(null);
@@ -21,14 +20,14 @@ const SectionStack = () => {
     })
 
     const handleScroll = () => {
-        window.scrollY >= stackSection.current.offsetTop -200 ? setIsSectionActive(true):setIsSectionActive(false);
+        window.scrollY >= stackSection.current.offsetTop -400 ? setIsSectionActive(true):setIsSectionActive(false);
         (window.scrollY > stackSection.current.offsetTop + stackSection.current.offsetHeight-100) ? setIsSectionPassed(true):setIsSectionPassed(false);
         if(window.scrollY>4000){
             const allPics = [...leftSide.current.children, ...rightSide.current.children];
             allPics.forEach(pic => {
                 const top = pic.offsetTop;
                 const bottom = pic.offsetTop + pic.offsetHeight;
-                if(window.scrollY + 300> top && window.scrollY < bottom) {
+                if(window.scrollY + 500> top && window.scrollY < bottom) {
                     pic.classList.add('active')
                 } else {
                     pic.classList.remove('active')

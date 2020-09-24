@@ -42,11 +42,11 @@ const Navigation = ({isMainActive}) => {
                     <p>Piotr Myszkiewicz</p>
                 </div>
                 <div className={`navigation--links--container ${isMainActive? 'in':''}`} >
-                    <div className="navigation--link--container"><a href="#header" onClick={scrollToSection}>Główna</a></div>
-                    <div className="navigation--link--container"><a href="#projects" onClick={scrollToSection}>Projekty</a></div>
+                    <div className="navigation--link--container"><a href="#header" onClick={scrollToSection}>Main</a></div>
+                    <div className="navigation--link--container"><a href="#projects" onClick={scrollToSection}>Projects</a></div>
                     <div className="navigation--link--container"><a href="#stack" onClick={scrollToSection}>Stack</a></div>
-                    <div className="navigation--link--container"> <a href="#interests" onClick={scrollToSection}>O mnie</a></div>
-                    <div className="navigation--link--container"><a href="#contact" onClick={scrollToSection}>Kontakt</a></div>
+                    <div className="navigation--link--container"> <a href="#interests" onClick={scrollToSection}>Passion</a></div>
+                    <div className="navigation--link--container"><a href="#contact" onClick={scrollToSection}>Contact</a></div>
                 </div>
             </div>
         </nav>

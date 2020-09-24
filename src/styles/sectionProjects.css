@@ -84,13 +84,50 @@
 .changingText--container {
     margin: auto;
     width: 80%;
+    height: 70%;
     opacity: 0;
-    transform: translateY(-100px);
-    transition: transform .2s, opacity .1s;
+    transform: translateY(-200px);
+    transition: transform .4s, opacity .2s;
 }
 
 .changingText--container.active {
     opacity: 1;
     transform: translateY(0);
     transition: transform .2s, opacity .1s;
+}
+
+.changingText--container h3 {
+    color: #fe8309;
+    font-size: 3em;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.changingText--container p {
+    color: #fff;
+    margin-top: 4em;
+    opacity: 0;
+}
+
+.changingText--container a {
+    margin-top: 4em;
+    display: inline-block;
+    text-decoration: none;
+    color: #ec677d;
+    opacity: 0;
+}
+
+.changingText--container.active h3 {
+    transition: all .5s;
+    opacity: 1;
+}
+
+.changingText--container.active p {
+    transition: all 1s;
+    opacity: 1;
+}
+
+.changingText--container.active a {
+    transition: all 1.5s;
+    opacity: 1;
 }
