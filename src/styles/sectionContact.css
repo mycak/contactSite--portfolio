@@ -3,8 +3,6 @@
     width: 85%;
     height: 100vh;
     max-width: 85%;
-
-    /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,7 +12,7 @@
 .contact--container {
     height: 100%;
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,0.05) 4%, rgba(0,0,0,1) 96%);
+    background: linear-gradient(0deg, rgba(255,255,255,0.05) -100%, rgba(0,0,0,1) 96%);
     text-align: center;
 }
 

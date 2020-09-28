@@ -14,7 +14,7 @@
 .header--leftside--container {
   transform: translateX(-100%);
   flex: .5;
-  background-color: #2f2f2b;
+  background-color: #1a1a17;
   height: 100%;
   min-width: 5vw;
   transition: all .5s;
