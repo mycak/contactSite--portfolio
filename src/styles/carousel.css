@@ -1,0 +1,34 @@
+.carousel-dots li button:before {
+    color:#fff;
+}
+
+.carousel-dots li.carousel-dots-active button:before {
+    opacity: .75;
+    color: #fff;
+}
+
+.slide--container {
+    min-width: 50vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.slide--photo {
+    margin-right: 2em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70%;
+    height: 100%;
+}
+
+.slide--1 { background-image: url('../helperFiles/images/passion-1.jpg');}
+.slide--2 { background-image: url('../helperFiles/images/passion-2.jpg');}
+.slide--3 { background-image: url('../helperFiles/images/passion-3.jpg');}
+
+.slide--description {
+    color: #fff;
+    width: 30%;
+}

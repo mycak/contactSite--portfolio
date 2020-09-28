@@ -6,7 +6,8 @@
 }
 
 .interests--leftside--container {
-    background-color:#2f2f2b;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 1%, rgba(47,47,43,1) 24%);
     width: 50%;
     min-height: 100%;
     transition: all 1s;
@@ -24,4 +25,41 @@
 
 .interests--rightside--container.active {
     width: 0%;
+}
+
+.interests--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.interests--title {
+    margin-top: 6em;
+    padding-top: 1.2em;
+    margin-bottom: .7em;
+    text-align: center;
+    font-size: 2.5em;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.interests--title.active {
+    opacity: 1;
+}
+
+.interests--carousel--wrapper {
+    display: none;
+    margin-top: 1em;
+    height: 75vh;
+    width: 80%;
+}
+
+.interests--carousel--wrapper.active {
+    display: inline;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.interests--carousel--wrapper.active.in {
+    opacity: 1;
 }
