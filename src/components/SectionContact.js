@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import '../styles/sectionContact.css';
 
 const SectionContact = () => {
+
     const section = useRef(null);
     const [isActiveTitle, setIsActiveTitle] = useState(false);
     const [isActiveFooter, setIsActiveFooter] = useState(false);

@@ -34,7 +34,7 @@
 }
 
 .interests--title {
-    margin-top: 6em;
+    margin-top: 4em;
     padding-top: 1.2em;
     margin-bottom: .7em;
     text-align: center;
@@ -57,9 +57,9 @@
 .interests--carousel--wrapper.active {
     display: inline;
     opacity: 0;
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .interests--carousel--wrapper.active.in {
     opacity: 1;
-} 
+}

@@ -1,5 +1,5 @@
 .section--stack {
-    height: 250vh;
+    min-height: 200vh;
     display: flex;
     flex-direction: row;
     width: 85%;
@@ -10,7 +10,7 @@
     min-height: 100%;
     background-color:#1a1a17;
     transition: all 1s;
-    padding-bottom: 22em;
+    padding-bottom: 4em;
 }
 
 .stack--rightside--container {

@@ -29,22 +29,15 @@ const SectionInterests = () => {
     }
 
     const handleScroll = () => {
-        (window.scrollY > section.current.offsetTop - 100)?setIsSectionActive(true):setIsSectionActive(false);
-        if(window.scrollY < section.current.offsetTop + 100 && isSliderActive ){
-            setIsSlidershown(false);
-        }
-        if(window.scrollY >= section.current.offsetTop + 100 && isSliderActive ){
+        const sectionTop = section.current.offsetTop;
+        const sectionHeight = section.current.offsetHeight;
+        (window.scrollY > sectionTop - 100)?setIsSectionActive(true):setIsSectionActive(false);
+        if(window.scrollY< sectionTop) setIsSlidershown(false);
+        if(window.scrollY > sectionTop && isSliderActive && window.scrollY <= sectionTop + sectionHeight -200){
             setIsSlidershown(true);
         }
-        if (window.scrollY <= section.current.offsetTop - 100) {
-            setIsSliderActive(false)
-        }
-        if(window.scrollY > section.current.offsetTop + section.current.offsetHeight -300 && isSliderActive) {
-            setIsSlidershown(false);
-        }
-        if(window.scrollY < section.current.offsetTop + section.current.offsetHeight -300 && isSliderActive) {
-            setIsSlidershown(true);
-        }
+        if(window.scrollY< sectionTop-100) setIsSliderActive(false);
+        if(window.scrollY > sectionTop + sectionHeight -200 ) setIsSlidershown(false);
     };
 
     const isActiveSection = isSectionActive ? 'active' : '';

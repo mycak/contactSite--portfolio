@@ -32,8 +32,7 @@ const Header = ({isMainActive}) => {
     return (
         <section className="section section--header" id="header" ref={header}>
             <header className="header--container">
-                <div className={`header--leftside--container ${isActiveHeader1} ${isActiveHeader3} `}>
-                </div>
+                <div className={`header--leftside--container ${isActiveHeader1} ${isActiveHeader3} `}></div>
                 <div className="header--main--container">
                     <div className="header--text--container">
                         <div className={`header--title ${isActiveHeader2}`}>
@@ -44,6 +43,13 @@ const Header = ({isMainActive}) => {
                         </div>
                         <div className={`header--description ${isActiveHeader2}`}>
                             <p>Hello ! I'm <span className="highlighted-text">31</span> years old front-end developer living in <span className="highlighted-text">Warsaw</span>. I search opportunity to develop mysefl during creating and designing websites.</p>
+                        </div>
+                        <div className={`header--arrow ${isActiveHeader2}`}>
+                            <div className="header--arrow--description bounce">
+                                <p>Scroll</p>
+                                <p>down</p>
+                            </div>
+                            <div className={`arrow bounce`}></div>
                         </div>
                     </div>
                     <div className={`header--pic--container ${isActiveHeader2}`}>

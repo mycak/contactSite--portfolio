@@ -8,6 +8,7 @@ import img2 from '../helperFiles/images/css.jpeg';
 import img3 from '../helperFiles/images/git.png';
 
 const SectionStack = () => {
+
     const [isSectionActive, setIsSectionActive] = useState(false);
     const [isSectionPassed, setIsSectionPassed] = useState(false);
     const stackSection = useRef(null);

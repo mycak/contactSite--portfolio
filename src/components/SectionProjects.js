@@ -7,10 +7,8 @@ import img4 from '../helperFiles/images/proj-4.jpeg';
 import { projectSectionText } from '../helperFiles/dataText';
 import ChangingTextField from './ChangingTextField';
 
-
-
 const SectionProjects = () => {
-    const [activeText, setActiveText] = useState(projectSectionText[1]);
+    const [activeText, setActiveText] = useState('projectSectionText[1]');
     const [isSectionActive, setIsSectionActive] = useState(false);
     const [isTextActive, SetIsTextActive] = useState(false);
     const [activePic, setActivePic] = useState(null);
@@ -20,6 +18,7 @@ const SectionProjects = () => {
     const leftSideContainer = useRef(null);
     const changingTextContainer = useRef(null);
     const firstPic = useRef(null);
+    const lastPic = useRef(null);
     const projectsContainerTop = (projectsContainer.current) ? projectsContainer.current.offsetTop : '';
 
     useEffect(() => {
@@ -41,22 +40,24 @@ const SectionProjects = () => {
         } else changingTextContainer.current.classList.remove('active');
     },[activePic])
 
-    const menageText = () => {
-        if (window.scrollY > projectsContainerTop + 100 && window.scrollY < 4100) {
-            const projectPics = [...picturesContainer.current.children];
-            const distanseBetweenPics = firstPic.current.offsetTop - projectsContainerTop;
-            projectPics.forEach(function(pic, i){
-                if (pic.getBoundingClientRect().top <= .7*distanseBetweenPics && pic.getBoundingClientRect().top + .6*pic.offsetHeight>=0) {
-                    setActivePic(i);
-                }
-            })
-        } else setActivePic(null);
-    };
-
     const menageClasses = () => {
         (window.scrollY >= .9*projectsContainerTop) ? setIsSectionActive(true):setIsSectionActive(false);
-        (window.scrollY >= .9*projectsContainerTop && window.scrollY < 4200) ? SetIsTextActive(true) : SetIsTextActive(false);
+        (window.scrollY >= .9*projectsContainerTop && window.scrollY < lastPic.current.offsetTop + lastPic.current.offsetHeight)?SetIsTextActive(true) : SetIsTextActive(false);
     }
+
+    const menageText = () => {
+        console.log(activePic)
+        const projectPics = [...picturesContainer.current.children];
+        const distanseBetweenPics = firstPic.current.offsetTop - projectsContainerTop;
+        projectPics.forEach(function(pic, i){
+            if (pic.getBoundingClientRect().top <= 1.2*distanseBetweenPics && pic.getBoundingClientRect().top + .6*pic.offsetHeight>=0) {
+                setActivePic(i);
+            }
+        })
+        if (window.scrollY < projectsContainerTop-200 || window.scrollY > lastPic.current.offsetTop + .7*lastPic.current.offsetHeight) {
+            setActivePic(null);
+        }
+    };
 
     const isActiveSection = isSectionActive ? 'active' : '';
     const isActiveText = isTextActive ? 'active' : '';
@@ -75,16 +76,16 @@ const SectionProjects = () => {
                     <h2>Projects</h2>
                 </div>
                 <div className="projects--pics--container" ref={picturesContainer}>
-                    <div className="projects--pic--container" data-id="0" ref={firstPic} >
+                    <div className={`projects--pic--container ${isActiveText}`} data-id="0" ref={firstPic} >
                         <img src={img1} alt="proj"></img>
                     </div>
-                    <div className="projects--pic--container" data-id="1">
+                    <div className={`projects--pic--container ${isActiveText}`} data-id="1">
                         <img src={img2} alt="proj"></img>
                     </div>
-                    <div className="projects--pic--container" data-id="2">
+                    <div className={`projects--pic--container ${isActiveText}`} data-id="2">
                         <img src={img3} alt="proj"></img>
                     </div>
-                    <div className="projects--pic--container" data-id="3">
+                    <div className={`projects--pic--container ${isActiveText}`} data-id="3" ref={lastPic}>
                         <img src={img4} alt="proj"></img>
                     </div>
                 </div>
