@@ -42,7 +42,7 @@
 .navigation--links--container {
     display: flex;
     flex-direction: column;
-    height: 30%;
+    height: 25%;
     justify-content: space-around;
     padding-left: 2em;
     margin-bottom: 6em;
@@ -110,4 +110,20 @@ a.navLink--active{
     color: #fff;
     /* color: rgba(34, 203, 255, 0.767); */
     text-shadow: 1px 1px rgb(255, 255, 255, .01);
+}
+
+@media (min-width: 1680px){
+    .navigation--links--container {
+        height: 18%;
+    }
+}
+
+
+@media (max-width: 1024px){
+    .signature--container {
+        font-size: .8em;
+    }
+    .navigation--link--container {
+        font-size: .9em;
+    }
 }

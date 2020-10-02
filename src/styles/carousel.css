@@ -8,6 +8,7 @@
 }
 
 .slide--container {
+    margin-top: 3em;
     min-width: 50vw;
     height: 60vh;
     display: flex;
@@ -31,4 +32,10 @@
 .slide--description {
     color: #fff;
     width: 30%;
+}
+
+@media (max-width: 1024px){
+    .slide--description {
+        font-weight: .9em;
+    }
 }

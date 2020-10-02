@@ -15,7 +15,7 @@ const SectionContact = () => {
     });
 
     const handleScroll = () => {
-        if(window.scrollY > section.current.offsetTop - section.current.offsetHeight+400) {
+        if(window.scrollY > section.current.offsetTop - section.current.offsetHeight+200) {
             setIsActiveTitle(true);
         } else {setIsActiveTitle(false)};
         if(window.scrollY > section.current.offsetTop - section.current.offsetHeight+600) {

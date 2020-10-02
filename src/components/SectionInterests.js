@@ -31,7 +31,7 @@ const SectionInterests = () => {
     const handleScroll = () => {
         const sectionTop = section.current.offsetTop;
         const sectionHeight = section.current.offsetHeight;
-        (window.scrollY > sectionTop - 100)?setIsSectionActive(true):setIsSectionActive(false);
+        (window.scrollY > sectionTop - 200)?setIsSectionActive(true):setIsSectionActive(false);
         if(window.scrollY< sectionTop) setIsSlidershown(false);
         if(window.scrollY > sectionTop && isSliderActive && window.scrollY <= sectionTop + sectionHeight -200){
             setIsSlidershown(true);

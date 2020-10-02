@@ -9,7 +9,7 @@ const Carousel = () => {
       autoplaySpeed: 4000,
       arrows: false,
       dots: true,
-      duration: 200,
+      duration: 500,
       shift: 50
     };
     return (

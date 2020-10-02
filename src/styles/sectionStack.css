@@ -1,5 +1,5 @@
 .section--stack {
-    min-height: 200vh;
+    height: 100%;
     display: flex;
     flex-direction: row;
     width: 85%;
@@ -14,6 +14,7 @@
 }
 
 .stack--rightside--container {
+    min-height: 200vh;
     width: 50%;
     transition: all 1s;
 }
@@ -39,19 +40,18 @@
 
 .leftside--pic--container, .rightside--pic--container {
     align-items: center;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    height: 100%;
 }
 
 .leftside--pic--container {
-    margin-top: 5em;
+    height: 80%;
+    justify-content: space-evenly;
 }
 
 .rightside--pic--container {
-    margin-top: 2em;
-    justify-content: flex-start;
+    height: 80%;
 }
 
 .leftside--pic--container.out, .rightside--pic--container.out {
@@ -66,3 +66,11 @@
     width: 100%;
 }
 
+/* @media (max-width: 1280px){
+    .stack--rightside--container {
+        min-height: 160vh;
+    }
+    .stack--rightside--container {
+        height: 140vh;
+    }
+} */

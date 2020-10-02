@@ -31,13 +31,14 @@ const SectionProjects = () => {
     });
 
     useEffect(()=>{
-        if(activePic !== null){
+        if(activePic !== null ){
             changingTextContainer.current.classList.remove('active');
             setTimeout(()=>{
                 setActiveText(projectSectionText[activePic]);
                 changingTextContainer.current.classList.add('active');
             },200);
-        } else changingTextContainer.current.classList.remove('active');
+        }else changingTextContainer.current.classList.remove('active');
+        if(activePic === null) changingTextContainer.current.classList.remove('active');
     },[activePic])
 
     const menageClasses = () => {
