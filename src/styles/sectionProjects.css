@@ -1,4 +1,5 @@
 .section--projects {
+    border: solid red;
     display: flex;
     flex-direction: row;
     width: 85%;
@@ -58,7 +59,7 @@
     margin: 10em;
     height: 90vh;
     width: 85%;
-    transition: all 2.5s;
+    transition: all 1s .5s;
 }
 
 .projects--pic--container.active {
@@ -86,6 +87,7 @@
 }
 
 .project--text--container.active {
+    border:solid red;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

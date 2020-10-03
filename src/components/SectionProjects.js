@@ -6,6 +6,7 @@ import img3 from '../helperFiles/images/proj-3.jpeg';
 import img4 from '../helperFiles/images/proj-4.jpeg';
 import { projectSectionText } from '../helperFiles/dataText';
 import ChangingTextField from './ChangingTextField';
+import { useDebouncedCallback } from 'use-lodash-debounce';
 
 const SectionProjects = () => {
     const [activeText, setActiveText] = useState('projectSectionText[1]');
@@ -23,10 +24,10 @@ const SectionProjects = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', menageClasses);
-        window.addEventListener('scroll', menageText);
+        window.addEventListener('scroll', debouncedMenageText);
         return () => {
             window.removeEventListener('scroll', menageClasses);
-            window.removeEventListener('scroll', menageText);
+            window.removeEventListener('scroll', debouncedMenageText);
         };
     });
 
@@ -34,20 +35,22 @@ const SectionProjects = () => {
         if(activePic !== null ){
             changingTextContainer.current.classList.remove('active');
             setTimeout(()=>{
-                setActiveText(projectSectionText[activePic]);
-                changingTextContainer.current.classList.add('active');
+                if(window.scrollY >= .9*projectsContainerTop && window.scrollY < lastPic.current.offsetTop + .5*lastPic.current.offsetHeight){
+                    setActiveText(projectSectionText[activePic]);
+                    changingTextContainer.current.classList.add('active');
+                }
             },200);
         }else changingTextContainer.current.classList.remove('active');
         if(activePic === null) changingTextContainer.current.classList.remove('active');
-    },[activePic])
+    },[activePic,projectsContainerTop])
 
     const menageClasses = () => {
         (window.scrollY >= .9*projectsContainerTop) ? setIsSectionActive(true):setIsSectionActive(false);
         (window.scrollY >= .9*projectsContainerTop && window.scrollY < lastPic.current.offsetTop + lastPic.current.offsetHeight)?SetIsTextActive(true) : SetIsTextActive(false);
     }
+    const debouncedMenageText = useDebouncedCallback(menageText, 200)
 
     const menageText = () => {
-        console.log(activePic)
         const projectPics = [...picturesContainer.current.children];
         const distanseBetweenPics = firstPic.current.offsetTop - projectsContainerTop;
         projectPics.forEach(function(pic, i){
