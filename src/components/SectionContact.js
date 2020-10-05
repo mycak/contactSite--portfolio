@@ -6,7 +6,6 @@ const SectionContact = () => {
     const section = useRef(null);
     const [isActiveTitle, setIsActiveTitle] = useState(false);
     const [isActiveFooter, setIsActiveFooter] = useState(false);
-
     useEffect(()=>{
         window.addEventListener('scroll', handleScroll);
         return () => {

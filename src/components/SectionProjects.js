@@ -20,6 +20,7 @@ const SectionProjects = () => {
     const changingTextContainer = useRef(null);
     const firstPic = useRef(null);
     const lastPic = useRef(null);
+
     const projectsContainerTop = (projectsContainer.current) ? projectsContainer.current.offsetTop : '';
 
     useEffect(() => {

@@ -16,6 +16,7 @@ const SectionStack = () => {
     const rightSide = useRef(null);
 
     useEffect(()=> {
+
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     })
@@ -23,22 +24,23 @@ const SectionStack = () => {
     const handleScroll = () => {
         window.scrollY >= stackSection.current.offsetTop -400 ? setIsSectionActive(true):setIsSectionActive(false);
         (window.scrollY > stackSection.current.offsetTop + stackSection.current.offsetHeight-300) ? setIsSectionPassed(true):setIsSectionPassed(false);
-        if(window.scrollY>4000){
-            const allPics = [...leftSide.current.children, ...rightSide.current.children];
-            allPics.forEach(pic => {
-                const top = pic.offsetTop;
-                const bottom = pic.offsetTop + pic.offsetHeight;
-                if(window.scrollY + 500> top && window.scrollY < bottom) {
-                    pic.classList.add('active')
-                } else {
-                    pic.classList.remove('active')
-                }
-            })
-        }
+
+        const allPics = [...leftSide.current.children, ...rightSide.current.children];
+        allPics.forEach(pic => {
+            const top = pic.offsetTop;
+            const bottom = pic.offsetTop + pic.offsetHeight;
+            if(window.scrollY + 500> top && window.scrollY < bottom) {
+                pic.classList.add('active')
+            } else {
+                pic.classList.remove('active')
+            }
+        })
+
     };
 
     const isActiveSection = isSectionActive ? 'active':'';
     const isPassedSection = isSectionPassed ? 'out' : '';
+
     return (
         <section id="stack" className="section section--stack" ref={stackSection}>
             <div className={`stack--leftside--container ${isPassedSection}`}>

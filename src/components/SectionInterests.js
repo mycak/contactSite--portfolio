@@ -3,11 +3,11 @@ import '../styles/sectionInterests.css';
 import Carousel from './Carousel';
 
 const SectionInterests = () => {
-
     const [isSectionActive, setIsSectionActive] = useState(false);
     const [isSliderActive, setIsSliderActive] = useState(false);
     const [isSliderShown, setIsSlidershown] = useState(false);
     const [isAfterTransition, setIsAfterTransition] = useState(false);
+
     const section = useRef(null);
     const leftSide = useRef(null);
 
@@ -20,6 +20,7 @@ const SectionInterests = () => {
             window.removeEventListener('scroll', handleScroll);
         }
     })
+
     const handleCarousel = (e) => {
         if (isSliderActive === false && e.propertyName === 'width' && e.target.classList.contains('active') ){
             setIsSliderActive(true);

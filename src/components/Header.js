@@ -36,7 +36,7 @@ const Header = ({isMainActive}) => {
                 <div className="header--main--container">
                     <div className="header--text--container">
                         <div className={`header--title ${isActiveHeader2}`}>
-                            <p><span className="gradient-text">Piotr Myszkiewicz</span></p>
+                            <p><span className="gradient-textt">Piotr Myszkiewicz</span></p>
                         </div>
                         <div className={`header--subtitle ${isActiveHeader2}`}>
                             <p>Front-end Developer</p>
