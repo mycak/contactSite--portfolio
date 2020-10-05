@@ -1,9 +1,5 @@
 .section--contact {
     color: #fff;
-    width: 85%;
-    height: 100vh;
-    max-width: 85%;
-    overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +8,6 @@
 
 .contact--container {
     min-height: 100vh;
-    background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,0.05) -100%, rgba(0,0,0,1) 96%);
     text-align: center;
     display: flex;
@@ -49,7 +44,7 @@
     opacity: 1;
 }
 
-.footer--options {
+.footer--options, .footer--signature {
     text-align: left;
     width: 30%;
 }
@@ -57,11 +52,6 @@
 .footer--options p, .footer--signature p{
     font-weight: 900;
     margin-top: .5em;
-}
-
-.footer--signature {
-    text-align: left;
-    width: 25%;
 }
 
 .footer--link a, .footer--layer{
@@ -78,6 +68,7 @@
 .footer--layer.fixed {
     margin-left: 3.5em;
 }
+
 .footer--underline {
     display: inline-block;
 }
@@ -107,7 +98,16 @@
     }
 }
 
+@media (max-width: 1279px){
+    .contact--title {
+        font-size: 1.4em;
+    }
+}
+
 @media (max-width: 1024px){
+    .section--contact {
+        max-width: 100%;
+    }
     .contact--title {
         font-size: 1.5em;
     }
@@ -116,5 +116,16 @@
     }
     .footer--signature {
         width: 35%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        flex-direction: column;
+        align-items: start;
+    }
+    .footer--options, .footer--signature{
+        width: 100%;
+        margin: 1em;
     }
 }

@@ -1,7 +1,6 @@
 .section--projects {
     display: flex;
     flex-direction: row;
-    width: 85%;
     min-height: 200vh;
 }
 
@@ -144,5 +143,12 @@
 .changingText--container.active a {
     transition: all 1.5s;
     opacity: 1;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .section--projects {
+        display: none;
+    }
 }
 

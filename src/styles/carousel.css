@@ -36,6 +36,12 @@
 
 @media (max-width: 1024px){
     .slide--description {
-        font-weight: .9em;
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .slide--description {
+        font-size: .7em;
     }
 }

@@ -14,10 +14,10 @@ const SectionContact = () => {
     });
 
     const handleScroll = () => {
-        if(window.scrollY > section.current.offsetTop - section.current.offsetHeight+200) {
+        if(window.scrollY > section.current.offsetTop - .5*section.current.offsetHeight) {
             setIsActiveTitle(true);
         } else {setIsActiveTitle(false)};
-        if(window.scrollY > section.current.offsetTop - section.current.offsetHeight+600) {
+        if(window.scrollY > section.current.offsetTop - .3*section.current.offsetHeight) {
             setIsActiveFooter(true);
         } else {setIsActiveFooter(false)}
     }
