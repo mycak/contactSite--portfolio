@@ -6,10 +6,7 @@
 
 .projects--leftside--container {
     flex: .5;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) -40%, rgba(26,26,23,1) 50%, rgba(0,0,0,1) 140%);
     width: 100%;
-    min-height: 100%;
     min-width: 5vw;
     transition: all .5s;
 }

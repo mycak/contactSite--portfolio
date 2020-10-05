@@ -70,7 +70,7 @@ const SectionProjects = () => {
 
     return (
         <section className="section section--projects" ref={projectsContainer}>
-            <div className={`projects--leftside--container ${isActiveSection}`} ref={leftSideContainer}>
+            <div className={`leftside--container projects--leftside--container ${isActiveSection}`} ref={leftSideContainer}>
                 <div className={`project--text--container ${isActiveText}`} >
                     <div className="changingText--container" ref={changingTextContainer}>
                         <ChangingTextField text={activeText} />

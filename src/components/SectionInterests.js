@@ -52,7 +52,7 @@ const SectionInterests = () => {
 
     return (
         <section  className="section section--interests" ref={section}>
-            <div className={`interests--leftside--container ${isActiveSection}`} ref={leftSide}>
+            <div className={`leftside--container interests--leftside--container ${isActiveSection}`} ref={leftSide}>
                 <div className="interests--wrapper">
                     <div className={`interests--title ${isActiveSlider}`} id="interests">
                         <h2>Passion</h2>

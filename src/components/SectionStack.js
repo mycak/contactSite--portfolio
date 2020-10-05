@@ -43,7 +43,7 @@ const SectionStack = () => {
 
     return (
         <section id="stack" className="section section--stack" ref={stackSection}>
-            <div className={`stack--leftside--container ${isPassedSection}`}>
+            <div className={`leftside--container stack--leftside--container ${isPassedSection}`}>
                 <div className={`stack--header--container ${isActiveSection}`}>
                     <h2>Stack</h2>
                 </div>
