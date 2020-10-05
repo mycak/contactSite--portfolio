@@ -62,7 +62,7 @@ const SectionProjects = () => {
         }
     };
 
-    const debouncedMenageText = useDebouncedCallback(menageText,20);
+    const debouncedMenageText = useDebouncedCallback(menageText,10);
 
     const isActiveSection = isSectionActive ? 'active' : '';
     const isActiveText = isTextActive ? 'active' : '';
