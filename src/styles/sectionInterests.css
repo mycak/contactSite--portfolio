@@ -1,5 +1,4 @@
 .section--interests {
-    border: solid red;
     display: flex;
     flex-direction: row;
     width: 85%;
