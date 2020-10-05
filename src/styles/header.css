@@ -105,12 +105,11 @@
 }
 
 .header--arrow {
+  display: flex;
+  flex-direction: column;
   margin-top: auto;
   opacity: 0;
-  width: 25%;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0;
+  width: auto;
 }
 
 .header--arrow.active {
@@ -125,10 +124,13 @@
 
 .header--arrow--description {
   font-size: .8em;
-  margin-left: .2em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .arrow {
+  margin-left: auto;
+  margin-right: auto;
   width: 40px;
   height: 40px;
   background-image: url('../helperFiles/images/arrowDown.svg');
@@ -157,7 +159,6 @@
 }
 
 @media (max-width: 1223px){
-  
   .header--title {
     font-size: 1em;
   }
@@ -206,9 +207,6 @@
 }
 
 @media screen and (max-width: 991px) {
-  .section--header {
-    border: solid red;
-  }
   .header--title {
     font-size: 2.2em;
   }
@@ -228,9 +226,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  .section--header {
-    border: solid blue;
-  }
   /* start of medium tablet styles */
   .header--title {
     font-size: 2.2em;
@@ -244,27 +239,29 @@
     font-size: .6em;
   }
   .header--pic--container {
-    height: 30%;
-    margin-right: 1em;
+    height: 60%;
+    margin-right: 3em;
   }
   }
   
   @media screen and (max-width: 479px) {
-    .section--header {
-      border: solid green;
+    .header--main--container {
+      flex-direction: column;
     }
-  /* start of phone styles */
-  /* .header--title {
-    font-size: 2.5em;
-  }
+    .header--pic--container {
+      order: -1;
+      margin-top: 2em;
+      margin-left: 3em;
+      width: 80%;
+    }
 
-  .header--subtitle {
-    font-size: 1.5em;
-  }
-
-  .header--description {
-    font-size: .8em;
-  } */
+    .header--text--container {
+      margin-right: 4em;
+      width: 100%;
+      height: 60%;
+      text-align: center;
+      align-items: center;
+    }
   }
 
 @media (min-width: 1680px){
