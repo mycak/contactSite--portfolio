@@ -48,20 +48,21 @@ const SectionProjects = () => {
         (window.scrollY >= .9*projectsContainerTop) ? setIsSectionActive(true):setIsSectionActive(false);
         (window.scrollY >= .9*projectsContainerTop && window.scrollY < lastPic.current.offsetTop + lastPic.current.offsetHeight)?SetIsTextActive(true) : SetIsTextActive(false);
     }
-    const debouncedMenageText = useDebouncedCallback(menageText, 200)
 
     const menageText = () => {
         const projectPics = [...picturesContainer.current.children];
         const distanseBetweenPics = firstPic.current.offsetTop - projectsContainerTop;
         projectPics.forEach(function(pic, i){
-            if (pic.getBoundingClientRect().top <= 1.2*distanseBetweenPics && pic.getBoundingClientRect().top + .6*pic.offsetHeight>=0) {
+            if (pic.getBoundingClientRect().top <= .8*distanseBetweenPics && pic.getBoundingClientRect().top + .6*pic.offsetHeight>=0) {
                 setActivePic(i);
             }
         })
-        if (window.scrollY < projectsContainerTop-200 || window.scrollY > lastPic.current.offsetTop + .7*lastPic.current.offsetHeight) {
+        if (window.scrollY < projectsContainerTop-200 || window.scrollY > lastPic.current.offsetTop + .5*lastPic.current.offsetHeight) {
             setActivePic(null);
         }
     };
+
+    const debouncedMenageText = useDebouncedCallback(menageText,20);
 
     const isActiveSection = isSectionActive ? 'active' : '';
     const isActiveText = isTextActive ? 'active' : '';

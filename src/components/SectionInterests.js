@@ -7,6 +7,7 @@ const SectionInterests = () => {
     const [isSectionActive, setIsSectionActive] = useState(false);
     const [isSliderActive, setIsSliderActive] = useState(false);
     const [isSliderShown, setIsSlidershown] = useState(false);
+    const [isAfterTransition, setIsAfterTransition] = useState(false);
     const section = useRef(null);
     const leftSide = useRef(null);
 
@@ -24,20 +25,30 @@ const SectionInterests = () => {
             setIsSliderActive(true);
             setTimeout(()=> {
                 setIsSlidershown(true);
+                setIsAfterTransition(true);
             },100);
         }
     }
 
     const handleScroll = () => {
+        console.log(isSliderShown)
         const sectionTop = section.current.offsetTop;
         const sectionHeight = section.current.offsetHeight;
-        (window.scrollY > sectionTop - 200)?setIsSectionActive(true):setIsSectionActive(false);
-        if(window.scrollY< sectionTop) setIsSlidershown(false);
-        if(window.scrollY > sectionTop && isSliderActive && window.scrollY <= sectionTop + sectionHeight -200){
-            setIsSlidershown(true);
-        }
-        if(window.scrollY< sectionTop-100) setIsSliderActive(false);
-        if(window.scrollY > sectionTop + sectionHeight -200 ) setIsSlidershown(false);
+        const scrollAtIn = window.scrollY + window.innerHeight;
+        const sectionBottom = sectionTop + sectionHeight;
+        const halfSection = sectionTop + .5*sectionHeight;
+    
+        (window.scrollY > sectionTop-300)?setIsSectionActive(true):setIsSectionActive(false);
+        if(window.scrollY < sectionTop-300)setIsAfterTransition(false);
+        (window.scrollY > sectionTop - 280 && isAfterTransition)?setIsSliderActive(true):setIsSliderActive(false);
+        // if(window.scrollY > sectionTop - 100 && isSliderActive && window.scrollY <= sectionTop + sectionHeight -200){
+        //     setIsSlidershown(true);
+        // }
+        // if(window.scrollY< sectionTop-100) setIsSliderActive(false);
+
+        if(scrollAtIn < halfSection) setIsSlidershown(false);
+        if(scrollAtIn < sectionBottom + 200  && scrollAtIn > halfSection && isSliderActive) setIsSlidershown(true);
+        if(scrollAtIn > sectionBottom + 200 ) setIsSlidershown(false);
     };
 
     const isActiveSection = isSectionActive ? 'active' : '';

@@ -22,7 +22,7 @@ const SectionStack = () => {
 
     const handleScroll = () => {
         window.scrollY >= stackSection.current.offsetTop -400 ? setIsSectionActive(true):setIsSectionActive(false);
-        (window.scrollY > stackSection.current.offsetTop + stackSection.current.offsetHeight-200) ? setIsSectionPassed(true):setIsSectionPassed(false);
+        (window.scrollY > stackSection.current.offsetTop + stackSection.current.offsetHeight-300) ? setIsSectionPassed(true):setIsSectionPassed(false);
         if(window.scrollY>4000){
             const allPics = [...leftSide.current.children, ...rightSide.current.children];
             allPics.forEach(pic => {
