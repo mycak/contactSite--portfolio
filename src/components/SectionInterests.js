@@ -31,7 +31,6 @@ const SectionInterests = () => {
     }
 
     const handleScroll = () => {
-        console.log(isSliderShown)
         const sectionTop = section.current.offsetTop;
         const sectionHeight = section.current.offsetHeight;
         const scrollAtIn = window.scrollY + window.innerHeight;

@@ -24,7 +24,7 @@
     opacity: 0;
     transform: translateX(-10%);
     transform: rotate(10deg);
-    transition: all .6s .5s;
+    transition: all .6s .2s;
 }
 
 .stack--header--container.active {
