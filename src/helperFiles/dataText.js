@@ -1,26 +1,26 @@
 export const projectSectionText = [
     {
         header: 'Streamy app',
-        desc: 'Pariatur tempor eiusmod velit eiusmod quis magna sit aliqua aliquip. Ullamco pariatur eiusmod aliqua ea enim reprehenderit dolor eiusmod fugiat qui ullamco exercitation duis. Cupidatat sit id culpa pariatur tempor ullamco eiusmod veniam aute incididunt. Mollit laborum dolor et velit sint sunt qui pariatur ex. Dolor elit est incididunt ullamco et do magna velit nostrud dolor sint non. Eiusmod eu enim veniam reprehenderit dolore nulla mollit nostrud deserunt. Laborum ex mollit cupidatat eu officia velit enim adipisicing aliquip.',
+        desc: 'With this application You can create and share stream to each oder. You can also menage all yours streams and watch streams of anybody else. Streams You can create with OBS. Sign up use Google Authorization. ',
         tech: 'React, Redux, Router, REST API',
         gh: 'https://google.com'
     },
     {
-        header: 'Eatyfy app',
-        desc: 'Pariatur tempor eiusmod velit eiusmod quis magna sit aliqua aliquip. Ullamco pariatur eiusmod aliqua ea enim reprehenderit dolor eiusmod fugiat qui ullamco exercitation duis. Cupidatat sit id culpa pariatur tempor ullamco eiusmod veniam aute incididunt. Mollit laborum dolor et velit sint sunt qui pariatur ex. Dolor elit est incididunt ullamco et do magna velit nostrud dolor sint non. Eiusmod eu enim veniam reprehenderit dolore nulla mollit nostrud deserunt. Laborum ex mollit cupidatat eu officia velit enim adipisicing aliquip.',
-        tech: 'JS, Api, Webpack',
+        header: 'Forkify app',
+        desc: 'Application uses Api to find recipes. After chosing recipe there is possibility to put them to favourite list or compose your own shopping list.',
+        tech: 'JS, Api, Webpack, Local Storage',
         gh: 'https://eatify-js-webpack-api.vercel.app/'
     },
     {
         header: 'Budget app',
-        desc: 'Pariatur tempor eiusmod velit eiusmod quis magna sit aliqua aliquip. Ullamco pariatur eiusmod aliqua ea enim reprehenderit dolor eiusmod fugiat qui ullamco exercitation duis. Cupidatat sit id culpa pariatur tempor ullamco eiusmod veniam aute incididunt. Mollit laborum dolor et velit sint sunt qui pariatur ex. Dolor elit est incididunt ullamco et do magna velit nostrud dolor sint non. Eiusmod eu enim veniam reprehenderit dolore nulla mollit nostrud deserunt. Laborum ex mollit cupidatat eu officia velit enim adipisicing aliquip.',
+        desc: 'It is a tool with whom You can calculate all Yours incomes and expenses.',
         tech: 'Vanilla JS, IIFE',
         gh: 'https://mycak.github.io/budget-app-vanillaJS/'
     },
     {
         header: 'Portfolio site',
-        desc: 'Pariatur tempor eiusmod velit eiusmod quis magna sit aliqua aliquip. Ullamco pariatur eiusmod aliqua ea enim reprehenderit dolor eiusmod fugiat qui ullamco exercitation duis. Cupidatat sit id culpa pariatur tempor ullamco eiusmod veniam aute incididunt. Mollit laborum dolor et velit sint sunt qui pariatur ex. Dolor elit est incididunt ullamco et do magna velit nostrud dolor sint non. Eiusmod eu enim veniam reprehenderit dolore nulla mollit nostrud deserunt. Laborum ex mollit cupidatat eu officia velit enim adipisicing aliquip.',
-        tech: 'React, Redux',
+        desc: 'The page that serves for portfolio and contact site with clients. This is react application with tons of CSS and uses many tidy animations. Entire App is made with React Hooks. ',
+        tech: 'React, Hooks',
         gh: 'google.com'
     }
 ];
