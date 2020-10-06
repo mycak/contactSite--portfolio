@@ -208,9 +208,12 @@
 }
 
 @media screen and (max-width: 767px) {
+  .leftside--container {
+    background: #000000;
+  }
   /* start of medium tablet styles */
   .header--main--container {
-    background: linear-gradient(0deg, rgba(0,0,0,1) -10%, rgb(44, 43, 43) 50%, rgba(0,0,0,1) 110%);
+    background: #000000;
     flex-direction: column;
   }
   .header--title {
@@ -220,12 +223,12 @@
     font-size: 1.5em;
   }
   .header--description {
-    font-size: 1em;
+    font-size: .8em;
     margin-bottom: 2em;
   }
   .header--pic--container {
     width: 70%;
-    height: 60%;
+    height: 80%;
     order: -1;
     margin-top: 2em;
     margin-left: 2em;
