@@ -161,29 +161,13 @@
   }
 }
 
-@media (max-width: 1223px){
-  .header--title {
-    font-size: 1em;
-  }
-
-  .header--subtitle {
-    font-size: 1em;
-  }
-
-  .header--description {
-    font-size: .5em;
-  }
-}
-
 @media (max-width: 1279px){
   .header--title {
     font-size: 3.5em;
   }
-
   .header--subtitle {
     font-size: 2em;
   }
-
   .header--description {
     font-size: 1em;
   }
@@ -193,11 +177,9 @@
   .header--title {
     font-size: 3em;
   }
-
   .header--subtitle {
     font-size: 2em;
   }
-
   .header--description {
     font-size: 1em;
   }
@@ -217,11 +199,9 @@
   .header--title {
     font-size: 2.4em;
   }
-
   .header--subtitle {
     font-size: 1.8em;
   }
-
   .header--description {
     font-size: 1em;
   }
@@ -229,65 +209,56 @@
 
 @media screen and (max-width: 767px) {
   /* start of medium tablet styles */
+  .header--main--container {
+    background: linear-gradient(0deg, rgba(0,0,0,1) -10%, rgb(44, 43, 43) 50%, rgba(0,0,0,1) 110%);
+  }
   .header--title {
     font-size: 2.2em;
   }
-
   .header--subtitle {
     font-size: 1.5em;
   }
-
   .header--description {
     font-size: 1em;
   }
   .header--pic--container {
     height: 60%;
   }
+}
+
+@media screen and (max-width: 479px) {
+  .header--main--container {
+    flex-direction: column;
   }
-  
-  @media screen and (max-width: 479px) {
-    .header--main--container {
-      flex-direction: column;
-    }
-    .header--pic--container {
-      order: -1;
-      margin-top: 2em;
-      margin-left: 3em;
-      width: 80%;
-    }
-
-    .header--text--container {
-      margin-right: 4em;
-      width: 100%;
-      height: 60%;
-      text-align: center;
-      align-items: center;
-    }
+  .header--pic--container {
+    order: -1;
+    margin-top: 2em;
+    margin-left: 3em;
+    width: 80%;
   }
+  .header--text--container {
+    margin-right: 4em;
+    width: 100%;
+    height: 60%;
+    text-align: center;
+    align-items: center;
+  }
+}
 
-
-
-
-
-  
 @media (min-width: 1680px){
   .header--title {
     font-size: 6em;
   }
-
   .header--subtitle {
     font-size: 3em;
   }
-
   .header--description {
     font-size: 1.3em;
   }
-
   .arrow {
     width: 80px;
     height: 80px;
   }
-
   .header--arrow--description {
     font-size: 1.6em;
   }
