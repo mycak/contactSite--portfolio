@@ -227,9 +227,6 @@
 }
 
 @media screen and (max-width: 479px) {
-  .leftside--container {
-    display: none;
-  }
   .header--main--container {
     flex-direction: column;
   }
