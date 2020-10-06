@@ -71,7 +71,7 @@
   margin-left: 1em;
   border-radius: 50%;
   opacity: 0;
-  background-image: url('../helperFiles/images/portrait.jpg');
+  background-image: url('../helperFiles/images/3.jpg');
   background-position: center;
   background-size: cover;
   transform: translateX(7%);
@@ -211,6 +211,7 @@
   /* start of medium tablet styles */
   .header--main--container {
     background: linear-gradient(0deg, rgba(0,0,0,1) -10%, rgb(44, 43, 43) 50%, rgba(0,0,0,1) 110%);
+    flex-direction: column;
   }
   .header--title {
     font-size: 2.2em;
@@ -222,19 +223,11 @@
     font-size: 1em;
   }
   .header--pic--container {
-    height: 60%;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .header--main--container {
-    flex-direction: column;
-  }
-  .header--pic--container {
+    width: 80%;
+    height: 80%;
     order: -1;
     margin-top: 2em;
-    margin-left: 3em;
-    width: 80%;
+    margin-left: 2em;
   }
   .header--text--container {
     margin-right: 4em;

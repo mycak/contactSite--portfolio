@@ -6,7 +6,7 @@ const Carousel = () => {
 
     const settings =  {
       autoplay: true,
-      autoplaySpeed: 4000,
+      autoplaySpeed: 5000,
       arrows: false,
       dots: true,
       duration: 500,
