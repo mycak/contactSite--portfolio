@@ -243,9 +243,6 @@
     text-align: center;
     align-items: center;
   }
-  .header--arrow {
-    display:none;
-  }
 }
 
 @media (min-width: 1680px){
