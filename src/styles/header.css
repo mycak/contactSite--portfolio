@@ -221,6 +221,7 @@
   }
   .header--description {
     font-size: 1em;
+    margin-bottom: 2em;
   }
   .header--pic--container {
     width: 80%;
@@ -240,10 +241,7 @@
 
 @media screen and (max-width: 479px) {
   .header--pic--container {
-    height: 60%;
-    order: -1;
-    margin-top: 2em;
-    margin-left: 2em;
+    height: 50%;
   }
 }
 

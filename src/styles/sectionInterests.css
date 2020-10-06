@@ -62,7 +62,11 @@
 .interests--carousel--wrapper.active.in {
     opacity: 1;
 }
-
+@media screen and (max-width: 767px) {
+    .section--interests {
+        min-height: 120vh;
+    }
+}
 @media (max-width: 1023px){
     .interests--carousel--wrapper {
         width: 90%;
