@@ -52,8 +52,8 @@ const Header = ({isMainActive}) => {
                             <div className={`arrow bounce`}></div>
                         </div>
                     </div>
-                    {/* <div className={`header--pic--container ${isActiveHeader2}`}>
-                    </div> */}
+                    <div className={`header--pic--container ${isActiveHeader2}`}>
+                    </div>
                 </div>
             </header>
         </section>
