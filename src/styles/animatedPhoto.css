@@ -139,3 +139,9 @@ figure.effect-milo:hover p {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+
+@media screen and (max-width: 767px) {
+	.animated--photo figure {
+		max-width: 240px;
+	}
+}

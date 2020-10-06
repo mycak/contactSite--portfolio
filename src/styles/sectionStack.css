@@ -1,5 +1,5 @@
 .section--stack {
-    height: 200vh;
+    min-height: 200vh;
     display: flex;
     flex-direction: row;
 }
@@ -63,8 +63,32 @@
     width: 99%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
     .section--stack {
-        display: none;
+        display: flex;
+        flex-direction: column;
+    }
+    .stack--leftside--container, .stack--rightside--container {
+        max-width: 100%;
+    }
+    .stack--rightside--container.out {
+        width: 100%;
+    }
+
+    .stack--leftside--container.out {
+        width: 100%;
+    }
+    .stack--leftside--container {
+        width: 100%;
+    }
+
+    .stack--rightside--container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px){
+    .section--stack {
+        max-width: 100%;
     }
 }

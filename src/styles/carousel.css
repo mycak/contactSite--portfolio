@@ -39,6 +39,22 @@
         font-size: .9em;
     }
 }
+@media screen and (max-width: 767px) {
+    .slide--container {
+        margin-top: 3em;
+        min-width: 80vw;
+        height: 65vh;
+        flex-direction: column;
+    }
+    .slide--description {
+        margin-top: 1em;
+        width: 90%;
+    }
+    .slide--photo {
+        margin-right: 0em;
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 479px) {
     .slide--description {

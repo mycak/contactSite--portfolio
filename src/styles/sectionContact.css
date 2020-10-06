@@ -43,10 +43,13 @@
     transform: translateY(0%);
     opacity: 1;
 }
+.footer--options {
+    margin-left: 2em;
+}
 
 .footer--options, .footer--signature {
     text-align: left;
-    width: 30%;
+    width: 35%;
 }
 
 .footer--options p, .footer--signature p{

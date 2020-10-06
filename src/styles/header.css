@@ -5,7 +5,7 @@
 }
 
 .leftside--container {
-  background: linear-gradient(0deg, rgba(0,0,0,1) -2000%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 2000%);
+  background: linear-gradient(0deg, rgba(0,0,0,1) -50%, rgb(29, 28, 28) 50%, rgba(0,0,0,1) 150%);
   min-height: 100%;
 }
 

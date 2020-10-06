@@ -108,7 +108,6 @@
 a.navLink--active{
     font-weight: 900;
     color: #fff;
-    /* color: rgba(34, 203, 255, 0.767); */
     text-shadow: 1px 1px rgb(255, 255, 255, .01);
 }
 
@@ -119,7 +118,7 @@ a.navLink--active{
 }
 
 
-@media (max-width: 1024px){
+@media (max-width: 1279px){
     .signature--container {
         font-size: .8em;
     }

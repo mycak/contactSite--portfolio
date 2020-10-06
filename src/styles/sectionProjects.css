@@ -89,6 +89,7 @@
 }
 
 .changingText--container {
+    border: solid red;
     margin: auto;
     width: 80%;
     height: 70%;
@@ -143,9 +144,20 @@
 }
 
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
     .section--projects {
         display: none;
     }
 }
 
+@media (max-width: 1024px){
+    .section--projects {
+        max-width: 100%;
+    }
+    .changingText--container a {
+        margin-top: 1em;
+    }
+    .changingText--container p {
+        margin-top: 2em;
+    }
+}
