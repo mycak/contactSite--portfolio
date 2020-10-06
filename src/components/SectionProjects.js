@@ -14,6 +14,7 @@ const SectionProjects = () => {
     const [isSectionActive, setIsSectionActive] = useState(false);
     const [isTextActive, SetIsTextActive] = useState(false);
     const [activePic, setActivePic] = useState(null);
+    const [isMobileActive, setIsMobileActive] = useState(false);
 
     const projectsContainer = useRef(null);
     const picturesContainer = useRef(null);
@@ -47,6 +48,7 @@ const SectionProjects = () => {
     },[activePic,projectsContainerTop])
 
     const menageClasses = () => {
+        (window.scrollY+ window.innerHeight > 1.4*projectsContainerTop) ? setIsMobileActive(true):setIsMobileActive(false);
         (window.scrollY >= .9*projectsContainerTop) ? setIsSectionActive(true):setIsSectionActive(false);
         (window.scrollY >= .9*projectsContainerTop && window.scrollY < lastPic.current.offsetTop + lastPic.current.offsetHeight)?SetIsTextActive(true) : SetIsTextActive(false);
     }
@@ -64,25 +66,22 @@ const SectionProjects = () => {
         }
     };
 
+    const debouncedMenageText = useDebouncedCallback(menageText,10);
+
+    const isActiveSection = isSectionActive ? 'active' : '';
+    const isActiveText = isTextActive ? 'active' : '';
+    const isActiveMobile = isMobileActive ? 'active' : '';
+
     const renderMobileSection = projectSectionText.map((text, i) => {
         return (
-            <div className="mobile--project--container" key={i}>
+            <div className={`mobile--project--container ${isActiveMobile}`} key={i}>
                 <div className="mobile--project--pic">
                     <img src={images[i]} alt="proj"></img>
                 </div>
                 <ChangingTextField text={text} />
             </div>
         )
-    })
-
-    const debouncedMenageText = useDebouncedCallback(menageText,10);
-
-    const isActiveSection = isSectionActive ? 'active' : '';
-    const isActiveText = isTextActive ? 'active' : '';
-
-
-
-
+    });
 
     return (
         <section ref={projectsContainer}>
@@ -115,7 +114,7 @@ const SectionProjects = () => {
                 </div>
             </div>
             <div className="section--projects--mobile">
-                <div className={`projects--title--container active`} id="projects" >
+                <div className={`projects--title--container ${isActiveMobile}`} id="projects" >
                     <h2>Projects</h2>
                 </div>
                 {renderMobileSection}
