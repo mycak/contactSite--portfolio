@@ -91,4 +91,7 @@
     .section--stack {
         max-width: 100%;
     }
+    .stack--rightside--container {
+        background: linear-gradient(0deg, rgba(0,0,0,1) -50%, rgb(29, 28, 28) 50%, rgba(0,0,0,1) 150%);
+    }
 }

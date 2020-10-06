@@ -131,4 +131,7 @@
         width: 100%;
         margin: 1em;
     }
+    .contact--title {
+        font-size: 1.3em;
+    }
 }
