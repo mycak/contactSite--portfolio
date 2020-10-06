@@ -24,6 +24,7 @@ const SectionProjects = () => {
     const lastPic = useRef(null);
 
     const projectsContainerTop = (projectsContainer.current) ? projectsContainer.current.offsetTop : '';
+    const projectsContainerBottom = (projectsContainer.current) ? projectsContainerTop + projectsContainer.current.offsetHeight : '';
 
     useEffect(() => {
         window.addEventListener('scroll', menageClasses);
@@ -48,7 +49,7 @@ const SectionProjects = () => {
     },[activePic,projectsContainerTop])
 
     const menageClasses = () => {
-        (window.scrollY+ window.innerHeight > 1.4*projectsContainerTop) ? setIsMobileActive(true):setIsMobileActive(false);
+        (window.scrollY+ window.innerHeight > 1.4*projectsContainerTop && window.scrollY+ window.innerHeight < projectsContainerBottom+100) ? setIsMobileActive(true):setIsMobileActive(false);
         (window.scrollY >= .9*projectsContainerTop) ? setIsSectionActive(true):setIsSectionActive(false);
         (window.scrollY >= .9*projectsContainerTop && window.scrollY < lastPic.current.offsetTop + lastPic.current.offsetHeight)?SetIsTextActive(true) : SetIsTextActive(false);
     }

@@ -135,3 +135,13 @@
         font-size: 1.3em;
     }
 }
+
+
+@media screen and (max-width: 479px) {
+    .contact--title {
+        font-size: 1em;
+    }
+    .footer {
+        font-size: .6em;
+    }
+}

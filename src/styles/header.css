@@ -227,12 +227,16 @@
 }
 
 @media screen and (max-width: 479px) {
+  .leftside--container {
+    display: none;
+  }
   .header--main--container {
     flex-direction: column;
   }
   .header--pic--container {
     order: -1;
     margin-top: 2em;
+    margin-bottom: 1em;
     margin-left: 3em;
     width: 80%;
   }
@@ -242,6 +246,9 @@
     height: 60%;
     text-align: center;
     align-items: center;
+  }
+  .header--arrow {
+    display:none;
   }
 }
 
