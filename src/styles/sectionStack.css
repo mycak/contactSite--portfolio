@@ -85,13 +85,13 @@
     .stack--rightside--container {
         width: 100%;
     }
+    .stack--rightside--container {
+        background: linear-gradient(0deg, rgba(0,0,0,1) -10%, rgb(44, 43, 43) 50%, rgba(0,0,0,1) 110%);
+    }
 }
 
 @media (max-width: 1024px){
     .section--stack {
         max-width: 100%;
-    }
-    .stack--rightside--container {
-        background: linear-gradient(0deg, rgba(0,0,0,1) -50%, rgb(29, 28, 28) 50%, rgba(0,0,0,1) 150%);
     }
 }

@@ -9,6 +9,7 @@ import ChangingTextField from './ChangingTextField';
 import { useDebouncedCallback } from 'use-lodash-debounce';
 
 const SectionProjects = () => {
+    const images = [img1, img2, img3, img4];
     const [activeText, setActiveText] = useState('projectSectionText[1]');
     const [isSectionActive, setIsSectionActive] = useState(false);
     const [isTextActive, SetIsTextActive] = useState(false);
@@ -63,38 +64,61 @@ const SectionProjects = () => {
         }
     };
 
+    const renderMobileSection = projectSectionText.map((text, i) => {
+        return (
+            <div className="mobile--project--container" key={i}>
+                <div className="mobile--project--pic">
+                    <img src={images[i]} alt="proj"></img>
+                </div>
+                <ChangingTextField text={text} />
+            </div>
+        )
+    })
+
     const debouncedMenageText = useDebouncedCallback(menageText,10);
 
     const isActiveSection = isSectionActive ? 'active' : '';
     const isActiveText = isTextActive ? 'active' : '';
 
+
+
+
+
     return (
-        <section className="section section--projects" ref={projectsContainer}>
-            <div className={`leftside--container projects--leftside--container ${isActiveSection}`} ref={leftSideContainer}>
-                <div className={`project--text--container ${isActiveText}`} >
-                    <div className="changingText--container" ref={changingTextContainer}>
-                        <ChangingTextField text={activeText} />
+        <section ref={projectsContainer}>
+            <div className="section section--projects" >
+                <div className={`leftside--container projects--leftside--container ${isActiveSection}`} ref={leftSideContainer}>
+                    <div className={`project--text--container ${isActiveText}`} >
+                        <div className="changingText--container" ref={changingTextContainer}>
+                            <ChangingTextField text={activeText} />
+                        </div>
+                    </div>
+                </div>
+                <div className="projects--rightside--container">
+                    <div className={`projects--title--container ${isActiveText}`} id="projects" >
+                        <h2>Projects</h2>
+                    </div>
+                    <div className="projects--pics--container" ref={picturesContainer}>
+                        <div className={`projects--pic--container ${isActiveText}`} data-id="0" ref={firstPic} >
+                            <img src={img1} alt="proj"></img>
+                        </div>
+                        <div className={`projects--pic--container ${isActiveText}`} data-id="1">
+                            <img src={img2} alt="proj"></img>
+                        </div>
+                        <div className={`projects--pic--container ${isActiveText}`} data-id="2">
+                            <img src={img3} alt="proj"></img>
+                        </div>
+                        <div className={`projects--pic--container ${isActiveText}`} data-id="3" ref={lastPic}>
+                            <img src={img4} alt="proj"></img>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className="projects--rightside--container">
-                <div className={`projects--title--container ${isActiveText}`} id="projects" >
+            <div className="section--projects--mobile">
+                <div className={`projects--title--container active`} id="projects" >
                     <h2>Projects</h2>
                 </div>
-                <div className="projects--pics--container" ref={picturesContainer}>
-                    <div className={`projects--pic--container ${isActiveText}`} data-id="0" ref={firstPic} >
-                        <img src={img1} alt="proj"></img>
-                    </div>
-                    <div className={`projects--pic--container ${isActiveText}`} data-id="1">
-                        <img src={img2} alt="proj"></img>
-                    </div>
-                    <div className={`projects--pic--container ${isActiveText}`} data-id="2">
-                        <img src={img3} alt="proj"></img>
-                    </div>
-                    <div className={`projects--pic--container ${isActiveText}`} data-id="3" ref={lastPic}>
-                        <img src={img4} alt="proj"></img>
-                    </div>
-                </div>
+                {renderMobileSection}
             </div>
         </section>
     )

@@ -5,7 +5,7 @@
 }
 
 .leftside--container {
-  background: linear-gradient(0deg, rgba(0,0,0,1) -50%, rgb(29, 28, 28) 50%, rgba(0,0,0,1) 150%);
+  background: linear-gradient(0deg, rgba(0,0,0,1) -10%, rgb(44, 43, 43) 50%, rgba(0,0,0,1) 110%);
   min-height: 100%;
 }
 
@@ -215,15 +215,15 @@
 
 @media screen and (max-width: 991px) {
   .header--title {
-    font-size: 2.2em;
+    font-size: 2.4em;
   }
 
   .header--subtitle {
-    font-size: 1.2em;
+    font-size: 1.8em;
   }
 
   .header--description {
-    font-size: .8em;
+    font-size: 1em;
   }
 }
 
@@ -234,11 +234,11 @@
   }
 
   .header--subtitle {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   .header--description {
-    font-size: .9em;
+    font-size: 1em;
   }
   .header--pic--container {
     height: 60%;
