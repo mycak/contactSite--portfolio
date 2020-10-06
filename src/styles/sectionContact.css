@@ -133,6 +133,7 @@
     }
     .contact--title {
         font-size: 1.3em;
+        width: 90%;
     }
 }
 
