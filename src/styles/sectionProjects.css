@@ -147,19 +147,7 @@
 .section--projects--mobile {
     display: none;
 }
-@media screen and (max-width: 767px) and (orientation: landscape) {
-    .changingText--title {
-        font-size: 2em;
-    }
-    .changingText--desc, .changingText--tech {
-        color: #fff;
-        margin: 1em;
-    }
-    .changingText--link a{
-        text-decoration: none;
-        color: #ec677d;
-    }
-}
+
 @media screen and (max-width: 767px) and (orientation: portrait) {
     .section--projects {
         display: none;
@@ -209,7 +197,19 @@
         color: #ec677d;
     }
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 736px) and (orientation: landscape) {
+    .changingText--title {
+        font-size: .6em;
+    }
+    .changingText--desc, .changingText--tech {
+        font-size: .7em;
+    }
+    .changingText--link a{
+        text-decoration: none;
+        color: #ec677d;
+    }
+}
+@media screen and (max-width: 479px) and (orientation: portrait) {
     .projects--title--container{
         margin-left: 0;
         font-size: 1.9em;
