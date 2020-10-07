@@ -24,8 +24,8 @@ const SectionInterests = () => {
     const handleCarousel = (e) => {
         if (isSliderActive === false && e.propertyName === 'width' && e.target.classList.contains('active') ){
             setIsSliderActive(true);
+            setIsSlidershown(true);
             setTimeout(()=> {
-                setIsSlidershown(true);
                 setIsAfterTransition(true);
             },200);
         }

@@ -43,7 +43,7 @@ const Header = ({isMainActive}) => {
                             <p>Front-end Developer</p>
                         </div>
                         <div className={`header--description ${isActiveHeader2}`}>
-                            <p>Hello ! I'm <span className="highlighted-text">31</span> years old front-end developer living in <span className="highlighted-text">Warsaw</span>. I search opportunity to develop mysefl during creating and designing websites.</p>
+                            <p>Hello ! I'm <span className="highlighted-text">31</span> years old front-end developer living in <span className="highlighted-text">Warsaw</span>. I search opportunity to develop myself during creating and designing websites.</p>
                         </div>
                         <div className={`header--arrow ${isActiveHeader2}`}>
                             <div className="header--arrow--description bounce">
