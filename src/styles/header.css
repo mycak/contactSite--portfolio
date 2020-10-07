@@ -251,7 +251,7 @@
 
 @media screen and (max-width: 479px) and (orientation: landscape) {
   .header--container {
-    height: 150vh;
+    height: 200vh;
   }
 }
 

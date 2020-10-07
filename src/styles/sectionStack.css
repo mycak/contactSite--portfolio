@@ -68,11 +68,11 @@
         display: flex;
     }
     .section--stack {
-        min-height: 120vh;
+        min-height: 100vh;
         flex-direction: column;
     }
     .stack--rightside--container {
-        min-height: 120vh;
+        min-height: 100vh;
     }
     .stack--leftside--container, .stack--rightside--container {
         max-width: 100%;
