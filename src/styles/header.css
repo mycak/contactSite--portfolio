@@ -254,7 +254,7 @@
 
 @media screen and (max-width: 800) and (orientation: landscape) {
   .section {
-    min-height: 200vh;
+    min-height: 400vh;
   }
 }
 

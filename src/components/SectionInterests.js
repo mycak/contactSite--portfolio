@@ -24,9 +24,9 @@ const SectionInterests = () => {
     const handleCarousel = (e) => {
         if (isSliderActive === false && e.propertyName === 'width' && e.target.classList.contains('active') ){
             setIsSliderActive(true);
-            setIsSlidershown(true);
             setTimeout(()=> {
                 setIsAfterTransition(true);
+                setIsSlidershown(true);
             },200);
         }
     }
@@ -39,7 +39,7 @@ const SectionInterests = () => {
         const halfSection = sectionTop + .5*sectionHeight;
 
         (window.scrollY > sectionTop-300)?setIsSectionActive(true):setIsSectionActive(false);
-        if(window.scrollY < sectionTop-300)setIsAfterTransition(false);
+        if(window.scrollY < sectionTop-310)setIsAfterTransition(false);
         (window.scrollY > sectionTop - 280 && isAfterTransition)?setIsSliderActive(true):setIsSliderActive(false);
 
         if(scrollAtIn < sectionBottom + 200  && scrollAtIn > halfSection && isSliderActive) setIsSlidershown(true);
