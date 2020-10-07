@@ -5,7 +5,8 @@
 }
 
 .leftside--container {
-  background: linear-gradient(0deg, rgba(0,0,0,1) -10%, rgb(44, 43, 43) 50%, rgba(0,0,0,1) 110%);
+  background: rgb(223,221,184);
+  background: radial-gradient(circle, rgba(223,221,184,1) -200%, rgba(0,0,0,1) 70%);
   min-height: 100%;
 }
 
@@ -248,7 +249,7 @@
   }
 }
 
-@media screen and (max-width: 767px) and (orientation: landscape) {
+@media screen and (max-width: 479px) and (orientation: landscape) {
   .header--container {
     height: 150vh;
   }

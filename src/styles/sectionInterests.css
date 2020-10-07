@@ -67,7 +67,7 @@
         min-height: 140vh;
     }
 }
-@media screen and (max-width: 767px) and (orientation: landscape) {
+@media screen and (max-width: 479px) and (orientation: landscape) {
     .section--interests {
       height: 160vh;
     }
