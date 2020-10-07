@@ -12,9 +12,9 @@ const Carousel = ({inOut}) => {
       duration: 500,
       shift: 50,
     };
-    if(caro.current){
-      inOut?caro.current.slickPause() : caro.current.slickPlay();
-    }
+    // if(caro.current){
+    //   inOut?caro.current.slickPause() : caro.current.slickPlay();
+    // }
     return (
         <Slider { ...settings } ref={caro}>
           <div>

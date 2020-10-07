@@ -89,13 +89,12 @@
         width: 100%;
     }
     .stack--leftside--container {
-        width: 100%;
-    }
-    .stack--rightside--container {
+        height: 120vh;
         width: 100%;
     }
     .stack--rightside--container {
         background: linear-gradient(0deg, rgba(0,0,0,1) -10%, rgb(44, 43, 43) 50%, rgba(0,0,0,1) 110%);
+        width: 100%;
     }
 }
 
