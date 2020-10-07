@@ -147,7 +147,19 @@
 .section--projects--mobile {
     display: none;
 }
-
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .changingText--title {
+        font-size: 2em;
+    }
+    .changingText--desc, .changingText--tech {
+        color: #fff;
+        margin: 1em;
+    }
+    .changingText--link a{
+        text-decoration: none;
+        color: #ec677d;
+    }
+}
 @media screen and (max-width: 767px) and (orientation: portrait) {
     .section--projects {
         display: none;
@@ -197,11 +209,6 @@
         color: #ec677d;
     }
 }
-
-@media screen and (max-width: 736px) and (orientation: landscape) {
-}
-
-
 @media screen and (max-width: 479px) {
     .projects--title--container{
         margin-left: 0;

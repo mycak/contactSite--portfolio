@@ -62,7 +62,12 @@
 .interests--carousel--wrapper.active.in {
     opacity: 1;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) and (orientation: portrait){
+    .section--interests {
+        min-height: 140vh;
+    }
+}
+@media screen and (max-width: 767px) and (orientation: portrait){
     .section--interests {
         min-height: 140vh;
     }
