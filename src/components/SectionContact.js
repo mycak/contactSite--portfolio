@@ -32,7 +32,7 @@ const SectionContact = () => {
                 </div>
                 <footer className={`footer ${isFooterActive}`}>
                     <div className="footer--options">
-                        <p>Email.     <span className="footer--link"><a href="mailto:mycak@wp.pl">mycak@wp.pl</a></span></p>
+                        <p>Email. <span className="footer--link fixed"><a href="mailto:mycak@wp.pl">mycak@wp.pl</a></span></p>
                         <p>Phone. <span className="footer--link"><a href="tel:+48505184510">+48 505 184 510</a></span></p>
                         <p>GitHub.<span className="footer--link"><a href="https://github.com/mycak">https://github.com/mycak</a></span></p>
                     </div>

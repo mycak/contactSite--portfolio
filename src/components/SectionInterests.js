@@ -6,7 +6,6 @@ const SectionInterests = () => {
     const [isSectionActive, setIsSectionActive] = useState(false);
     const [isSliderActive, setIsSliderActive] = useState(false);
     const [isSliderShown, setIsSlidershown] = useState(false);
-    const [isAfterTransition, setIsAfterTransition] = useState(false);
 
     const section = useRef(null);
     const leftSide = useRef(null);
@@ -25,7 +24,7 @@ const SectionInterests = () => {
         if (isSliderActive === false && e.propertyName === 'width' && e.target.classList.contains('active') ){
             setIsSliderActive(true);
             setTimeout(()=> {
-                setIsAfterTransition(true);
+                setIsSliderActive(true);
                 setIsSlidershown(true);
             },200);
         }
@@ -37,12 +36,13 @@ const SectionInterests = () => {
         const scrollAtIn = window.scrollY + window.innerHeight;
         const sectionBottom = sectionTop + sectionHeight;
         const halfSection = sectionTop + .5*sectionHeight;
+        if(window.scrollY < sectionTop-300) {
+            setIsSectionActive(false);
+            setIsSliderActive(false);
+        }
+        if(window.scrollY > sectionTop-300) setIsSectionActive(true);
 
-        (window.scrollY > sectionTop-300)?setIsSectionActive(true):setIsSectionActive(false);
-        if(window.scrollY < sectionTop-310)setIsAfterTransition(false);
-        (window.scrollY > sectionTop - 280 && isAfterTransition)?setIsSliderActive(true):setIsSliderActive(false);
-
-        if(scrollAtIn < sectionBottom + 200  && scrollAtIn > halfSection && isSliderActive) setIsSlidershown(true);
+        if(scrollAtIn < sectionBottom + 100  && scrollAtIn > halfSection && isSliderActive) setIsSlidershown(true);
         if(scrollAtIn > sectionBottom + 200 || scrollAtIn < halfSection) setIsSlidershown(false);
     };
 

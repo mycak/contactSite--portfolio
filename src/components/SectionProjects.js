@@ -62,7 +62,7 @@ const SectionProjects = () => {
                 setActivePic(i);
             }
         })
-        if (window.scrollY < projectsContainerTop-200 || window.scrollY > lastPic.current.offsetTop + .5*lastPic.current.offsetHeight) {
+        if (window.scrollY < projectsContainerTop-100 || window.scrollY > lastPic.current.offsetTop + .5*lastPic.current.offsetHeight) {
             setActivePic(null);
         }
     };
