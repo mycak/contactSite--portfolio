@@ -9,6 +9,7 @@ import SectionProjects from './SectionProjects';
 import SectionStack from './SectionStack';
 import SectionInterests from './SectionInterests';
 import SectionContact from './SectionContact';
+import MobileNavigation from './MobileNavigation'
 
 const App = () => {
     const siteContainer = useRef(null);
@@ -33,6 +34,7 @@ const App = () => {
                 <SectionStack />
                 <SectionInterests />
                 <SectionContact />
+                <MobileNavigation />
             </div>
         </div>
     )

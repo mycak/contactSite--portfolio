@@ -115,7 +115,7 @@ const SectionProjects = () => {
                 </div>
             </div>
             <div className="section--projects--mobile">
-                <div className={`projects--title--container ${isActiveMobile}`} id="projects" >
+                <div className={`projects--title--container ${isActiveMobile}`} id="projectsMobile" >
                     <h2>Projects</h2>
                 </div>
                 {renderMobileSection}

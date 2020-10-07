@@ -27,7 +27,7 @@ const SectionInterests = () => {
             setTimeout(()=> {
                 setIsSlidershown(true);
                 setIsAfterTransition(true);
-            },100);
+            },200);
         }
     }
 

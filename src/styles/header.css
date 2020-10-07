@@ -209,6 +209,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .header--arrow.active {
+    opacity: 0;
+  }
   .leftside--container {
     background: #000000;
   }
