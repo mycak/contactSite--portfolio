@@ -58,7 +58,7 @@ const SectionInterests = () => {
                         <h2>Passion</h2>
                     </div>
                     <div className={`interests--carousel--wrapper ${isActiveSlider} ${isShownSlider}`}>
-                        <Carousel />
+                        <Carousel inOut={isSliderShown} />
                     </div>
                 </div>
             </div>

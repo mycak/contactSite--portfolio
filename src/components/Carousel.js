@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Slider from 'infinite-react-carousel';
 import '../styles/carousel.css';
 
-const Carousel = () => {
-
+const Carousel = ({inOut}) => {
+    const caro = useRef(null);
     const settings =  {
       autoplay: true,
       autoplaySpeed: 5000,
       arrows: false,
       dots: true,
       duration: 500,
-      shift: 50
+      shift: 50,
     };
+    if(caro.current){
+      inOut?caro.current.slickPause() : caro.current.slickPlay();
+    }
     return (
-        <Slider { ...settings }>
+        <Slider { ...settings } ref={caro}>
           <div>
             <div className="slide--container">
               <div className="slide--photo slide--1">
