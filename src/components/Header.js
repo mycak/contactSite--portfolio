@@ -32,7 +32,8 @@ const Header = ({isMainActive}) => {
     return (
         <section className="section section--header" id="header" ref={header}>
             <header className="header--container">
-                <div className={`leftside--container header--leftside--container ${isActiveHeader1} ${isActiveHeader3} `}></div>
+                <div className={`leftside--container header--leftside--container ${isActiveHeader1} ${isActiveHeader3} `}>
+                </div>
                 <div className="header--main--container">
                     <div className="header--text--container">
                         <div className={`header--title ${isActiveHeader2}`}>

@@ -141,8 +141,10 @@ figure.effect-milo:hover p {
 }
 
 @media screen and (max-width: 767px) {
-	.animated--photo figure {
-		max-width: 320px;
+	.animated--photo {
+		max-height: 70vh;
+		margin-top: 3em;
+		margin-bottom: 3em;
 	}
 	.animated--photo figure figcaption {
 		font-size: .9em;

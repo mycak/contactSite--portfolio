@@ -29,7 +29,7 @@ const SectionStack = () => {
         allPics.forEach(pic => {
             const top = pic.offsetTop;
             const bottom = pic.offsetTop + pic.offsetHeight;
-            if(window.scrollY + 500> top && window.scrollY < bottom) {
+            if(window.scrollY + 500> top && window.scrollY + .5*pic.offsetHeight < bottom) {
                 pic.classList.add('active')
             } else {
                 pic.classList.remove('active')

@@ -64,9 +64,15 @@
 }
 
 @media screen and (max-width: 767px) {
-    .section--stack {
+    .leftside--pic--container.out, .rightside--pic--container.out {
         display: flex;
+    }
+    .section--stack {
+        min-height: 120vh;
         flex-direction: column;
+    }
+    .stack--rightside--container {
+        min-height: 120vh;
     }
     .stack--leftside--container, .stack--rightside--container {
         max-width: 100%;

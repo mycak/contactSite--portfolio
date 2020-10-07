@@ -54,7 +54,7 @@ const SectionInterests = () => {
         <section  className="section section--interests" ref={section}>
             <div className={`leftside--container interests--leftside--container ${isActiveSection}`} ref={leftSide}>
                 <div className="interests--wrapper">
-                    <div className={`interests--title ${isActiveSlider}`} id="interests">
+                    <div className={`interests--title ${isActiveSection}`} id="interests">
                         <h2>Passion</h2>
                     </div>
                     <div className={`interests--carousel--wrapper ${isActiveSlider} ${isShownSlider}`}>
