@@ -6,6 +6,11 @@
     left: 0;
     height: 100vh;
     width: 100vw;
+    opacity:0;
+    transition: all 3s;
+}
+.mobileNav--container.active {
+    opacity: 1;
 }
 .mobileNav--menu--layer{
     background: black;

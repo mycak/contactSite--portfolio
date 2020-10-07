@@ -34,7 +34,7 @@ const App = () => {
                 <SectionStack />
                 <SectionInterests />
                 <SectionContact />
-                <MobileNavigation />
+                <MobileNavigation isMainActive={mainActive}/>
             </div>
         </div>
     )

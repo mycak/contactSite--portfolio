@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/mobileNavigation.css';
 
-const MobileNavigation = () => {
+const MobileNavigation = ({isMainActive}) => {
     const [isLayerActive, setIsLayerActive]= useState(false);
 
     const handleMenuClick = ()=> {
@@ -17,11 +17,11 @@ const MobileNavigation = () => {
         },800)
 
     }
-
+    const isActiveMain = isMainActive ? 'active' : ''
     const isActiveLayer = isLayerActive ? 'active': '';
     const nameMainButton = isLayerActive ? 'CLOSE' : 'MENU'
     return (
-        <div className="mobileNav--container">
+        <div className={`mobileNav--container ${isActiveMain}`}>
             <div className={`mobileNav--menu--layer ${isActiveLayer}`}>
                 <div className={`mobileNav--menu-buttons ${isActiveLayer}`}>
                     <button data-id="#header" onClick={handleClick}>Main</button>
