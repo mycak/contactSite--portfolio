@@ -3,9 +3,9 @@ import Slider from 'infinite-react-carousel';
 import '../styles/carousel.css';
 
 const Carousel = ({inOut}) => {
-    const caro = useRef(null);
+    const carousel = useRef(null);
     const settings =  {
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 5000,
       arrows: false,
       dots: true,
@@ -16,7 +16,7 @@ const Carousel = ({inOut}) => {
     //   inOut?caro.current.slickPause() : caro.current.slickPlay();
     // }
     return (
-        <Slider { ...settings } ref={caro}>
+        <Slider { ...settings } ref={carousel}>
           <div>
             <div className="slide--container">
               <div className="slide--photo slide--1">

@@ -68,7 +68,7 @@
     width: 99%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) and (orientation: portrait) {
     .leftside--pic--container.out, .rightside--pic--container.out {
         display: flex;
     }

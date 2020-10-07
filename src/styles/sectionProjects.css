@@ -148,8 +148,7 @@
     display: none;
 }
 
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) and (orientation: portrait) {
     .section--projects {
         display: none;
     }
@@ -197,6 +196,9 @@
         text-decoration: none;
         color: #ec677d;
     }
+}
+
+@media screen and (max-width: 736px) and (orientation: landscape) {
 }
 
 
