@@ -43,7 +43,7 @@ const SectionProjects = () => {
                     setActiveText(projectSectionText[activePic]);
                     changingTextContainer.current.classList.add('active');
                 }
-            },200);
+            },400);
         }else changingTextContainer.current.classList.remove('active');
         if(activePic === null) changingTextContainer.current.classList.remove('active');
     },[activePic,projectsContainerTop])
@@ -114,7 +114,7 @@ const SectionProjects = () => {
                     </div>
                 </div>
             </div>
-            <div className="section--projects--mobile">
+            <div className="spyMob section--projects--mobile">
                 <div className={`projects--title--container ${isActiveMobile}`} id="projectsMobile" >
                     <h2>Projects</h2>
                 </div>

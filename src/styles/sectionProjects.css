@@ -8,7 +8,7 @@
     flex: .5;
     width: 100%;
     min-width: 5vw;
-    transition: all .5s;
+    transition: all 1s;
 }
 
 .projects--leftside--container.active {
@@ -51,14 +51,14 @@
 
 .projects--pic--container {
     opacity: 0;
-    margin-left: 20em;
     margin: 10em;
     height: 90vh;
-    width: 85%;
-    transition: all 1s .5s;
+    width: 40%;
+    transition: all 1.5s;
 }
 
 .projects--pic--container.active {
+    width: 85%;
     opacity: 1;
 }
 
@@ -96,7 +96,7 @@
     height: 70%;
     opacity: 0;
     transform: translateY(-200px);
-    transition: transform .4s, opacity .2s;
+    transition: transform .6s, opacity .4s;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,7 +105,7 @@
 .changingText--container.active {
     opacity: 1;
     transform: translateY(0);
-    transition: transform .2s, opacity .1s;
+    transition: transform .4s, opacity .2s;
 }
 
 .changingText--container h3 {

@@ -23,7 +23,7 @@ const SectionStack = () => {
 
     const handleScroll = () => {
         window.scrollY >= stackSection.current.offsetTop -400 ? setIsSectionActive(true):setIsSectionActive(false);
-        (window.scrollY > stackSection.current.offsetTop + stackSection.current.offsetHeight-300) ? setIsSectionPassed(true):setIsSectionPassed(false);
+        (window.scrollY > stackSection.current.offsetTop + stackSection.current.offsetHeight-100) ? setIsSectionPassed(true):setIsSectionPassed(false);
 
         const allPics = [...leftSide.current.children, ...rightSide.current.children];
         allPics.forEach(pic => {
@@ -42,7 +42,7 @@ const SectionStack = () => {
     const isPassedSection = isSectionPassed ? 'out' : '';
 
     return (
-        <section id="stack" className="section section--stack" ref={stackSection}>
+        <section id="stack" className="section spyMob section--stack" ref={stackSection}>
             <div className={`leftside--container stack--leftside--container ${isPassedSection}`}>
                 <div className={`stack--header--container ${isActiveSection}`}>
                     <h2>Stack</h2>

@@ -7,10 +7,7 @@
     height: 15vh;
     width: 100vw;
     opacity:0;
-    transition: all 3s;
-}
-.mobileNav--container.active {
-    opacity: 1;
+    transition: opacity 3s;
 }
 .mobileNav--menu--layer{
     background: black;
@@ -37,12 +34,27 @@
     opacity: 0;
     transition: all .5s .8s;
 }
-.mobileNav--menu-buttons.active{
+.mobileNav--logo{
+    width: 40%;
+    height: 10vh;
+    top:10%;
+    right: 0;
+    font-size: 1.1em;
+    position: fixed;
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+}
+.mobileNav--menu-buttons.active,.mobileNav--logo.active, .mobileNav--container.active{
     opacity: 1;
 }
 
 .mobileNav--menu-buttons button {
     font-size: 1.1em;
+}
+
+.projects--mobile--button {
+    display: none;
 }
 
 /* SIDEBAR */
@@ -74,5 +86,13 @@
 @media screen and (max-width: 1023px) {
     .mobileNav--container {
         display: flex;
+    }
+}
+@media screen and (max-width: 767px) {
+    .projects--button{
+        display:none;
+    }
+    .projects--mobile--button{
+        display: block;
     }
 }

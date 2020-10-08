@@ -30,7 +30,7 @@ const Header = ({isMainActive}) => {
     const isActiveHeader3 = isOutsideHeader ? 'roll' : '';
 
     return (
-        <section className="section section--header" id="header" ref={header}>
+        <section className="section spyMob section--header" id="header" ref={header}>
             <header className="header--container">
                 <div className={`leftside--container header--leftside--container ${isActiveHeader1} ${isActiveHeader3} `}>
                 </div>

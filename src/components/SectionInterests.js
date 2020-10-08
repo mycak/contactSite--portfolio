@@ -36,11 +36,11 @@ const SectionInterests = () => {
         const scrollAtIn = window.scrollY + window.innerHeight;
         const sectionBottom = sectionTop + sectionHeight;
         const halfSection = sectionTop + .5*sectionHeight;
-        if(window.scrollY < sectionTop-300) {
+        if(window.scrollY <= sectionTop-100) {
             setIsSectionActive(false);
             setIsSliderActive(false);
         }
-        if(window.scrollY > sectionTop-300) setIsSectionActive(true);
+        if(window.scrollY > sectionTop-100) setIsSectionActive(true);
 
         if(scrollAtIn < sectionBottom + 100  && scrollAtIn > halfSection && isSliderActive) setIsSlidershown(true);
         if(scrollAtIn > sectionBottom + 200 || scrollAtIn < halfSection) setIsSlidershown(false);
@@ -51,7 +51,7 @@ const SectionInterests = () => {
     const isShownSlider = isSliderShown ? 'in' : '';
 
     return (
-        <section  className="section section--interests" ref={section}>
+        <section  className="section spyMob section--interests" ref={section}>
             <div className={`leftside--container interests--leftside--container ${isActiveSection}`} ref={leftSide}>
                 <div className="interests--wrapper">
                     <div className={`interests--title ${isActiveSection}`} id="interests">

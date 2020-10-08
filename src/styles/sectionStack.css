@@ -6,7 +6,7 @@
 
 .stack--leftside--container {
     width: 50%;
-    height: 180vh;
+    height: 200vh;
     transition: all 1s;
 }
 
@@ -21,7 +21,7 @@
     opacity: 0;
     transform: translateX(-10%);
     transform: rotate(10deg);
-    transition: all .6s;
+    transition: all .8s;
 }
 
 .stack--header--container.active {
@@ -77,7 +77,7 @@
         flex-direction: column;
     }
     .stack--rightside--container {
-        min-height: 100vh;
+        min-height: 110vh;
     }
     .stack--leftside--container, .stack--rightside--container {
         max-width: 100%;
@@ -89,7 +89,7 @@
         width: 100%;
     }
     .stack--leftside--container {
-        height: 120vh;
+        height: 140vh;
         width: 100%;
     }
     .stack--rightside--container {
