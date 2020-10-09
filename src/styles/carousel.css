@@ -50,10 +50,10 @@
     .slide--description {
         margin-top: 1em;
         width: 90%;
-        font-size: .6em;
+        font-size: .8em;
     }
     .slide--photo {
-        margin-right: 0em;
+        margin-right: 0;
         width: 100%;
     }
 }

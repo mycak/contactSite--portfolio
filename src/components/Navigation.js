@@ -42,9 +42,9 @@ const Navigation = ({isMainActive}) => {
                 <div className={`navigation--links--container ${isMainActive? 'in':''}`} >
                     <div  className="navigation--link--container"><a href="#header" data-key='0' onClick={scrollToSection}>Main</a></div>
                     <div  className="navigation--link--container"><a href="#projects" data-key='1' onClick={scrollToSection}>Projects</a></div>
-                    <div data-key='2' className="navigation--link--container"><a data-key='2'href="#stack" onClick={scrollToSection}>Stack</a></div>
-                    <div data-key='3' className="navigation--link--container"><a data-key='3' href="#interests" onClick={scrollToSection}>Passion</a></div>
-                    <div data-key='4' className="navigation--link--container"><a data-key='4'href="#contact" onClick={scrollToSection}>Contact</a></div>
+                    <div data-key='2' className="navigation--link--container"><a href="#stack" data-key='2' onClick={scrollToSection}>Stack</a></div>
+                    <div data-key='3' className="navigation--link--container"><a href="#interests" data-key='3'  onClick={scrollToSection}>Passion</a></div>
+                    <div data-key='4' className="navigation--link--container"><a href="#contact" data-key='4' onClick={scrollToSection}>Contact</a></div>
                 </div>
             </div>
         </nav>
