@@ -25,7 +25,7 @@ const SectionContact = () => {
     const isFooterActive = isActiveFooter?'active':'';
 
     return (
-        <section id="contact" className="sections pyMob section--contact" ref={section}>
+        <section id="contact" className="section spyMob section--contact" ref={section}>
             <div className="contact--container">
                 <div className={`contact--title ${isTitleActive}`}>
                     <h2>Let's make something <span className={`footer--underline ${isFooterActive}`}>amazing</span> together.</h2>

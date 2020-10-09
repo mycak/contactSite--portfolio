@@ -67,7 +67,7 @@ const SectionProjects = () => {
         }
     };
 
-    const debouncedMenageText = useDebouncedCallback(menageText,10);
+    const debouncedMenageText = useDebouncedCallback(menageText,20);
 
     const isActiveSection = isSectionActive ? 'active' : '';
     const isActiveText = isTextActive ? 'active' : '';
@@ -85,7 +85,7 @@ const SectionProjects = () => {
     });
 
     return (
-        <section ref={projectsContainer}>
+        <section ref={projectsContainer} className="spyMob">
             <div className="section section--projects" >
                 <div className={`leftside--container projects--leftside--container ${isActiveSection}`} ref={leftSideContainer}>
                     <div className={`project--text--container ${isActiveText}`} >
@@ -114,7 +114,7 @@ const SectionProjects = () => {
                     </div>
                 </div>
             </div>
-            <div className="spyMob section--projects--mobile">
+            <div className="section--projects--mobile">
                 <div className={`projects--title--container ${isActiveMobile}`} id="projectsMobile" >
                     <h2>Projects</h2>
                 </div>

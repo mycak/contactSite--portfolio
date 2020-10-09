@@ -10,7 +10,10 @@ const Carousel = ({inOut}) => {
       arrows: false,
       dots: true,
       duration: 500,
-      shift: 50,
+      shift: 10,
+      initialSlide: 3,
+      accessibility: false,
+      swipe: false
     };
     // if(caro.current){
     //   inOut?caro.current.slickPause() : caro.current.slickPlay();

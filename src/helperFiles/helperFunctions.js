@@ -5,26 +5,22 @@ export const countPercentScrolledSite = (scrollY) => {
     const percRounded = Math.round(perc);
     return percRounded;
 }
-
-export const spyMenuActive = () => {
+export const spyMenu =  (sections, buttons, className) => {
     document.addEventListener('DOMContentLoaded', function(){
-        const sections = document.querySelectorAll('.section');
-        const menu_links = document.querySelectorAll('.navigation--link--container a');
-        const makeActive = (link) => menu_links[link].classList.add("navLink--active");
-        const removeActive = (link) => menu_links[link].classList.remove("navLink--active");
-        const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
+        const sectionsList = document.querySelectorAll(sections);
+        const menu_links = document.querySelectorAll(buttons);
         const sectionMargin = 200;
-        let currentActive = 0;
-        document.querySelector('.navigation--link--container a').classList.add('navLink--active');
-
-  // listen for scroll events
+        document.querySelector(buttons).classList.add(className);
+        const menageActive = (current) => {
+            menu_links.forEach(link => {
+                if (parseInt(link.dataset.key) === current){
+                    link.classList.add(className);
+                } else link.classList.remove(className);
+            })
+        };
         window.addEventListener("scroll", () => {
-            const current = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1;
-            if (current !== currentActive) {
-            removeAllActive();
-            currentActive = current;
-            makeActive(current);
-            }
-        });
-    },false);
+            const current = sectionsList.length - [...sectionsList].reverse().findIndex((section) => window.scrollY >= section.offsetTop-sectionMargin) - 1;
+            menageActive(current);
+        },false);
+    });
 };

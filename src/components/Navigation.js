@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/navigation.css';
-import {countPercentScrolledSite, spyMenuActive} from '../helperFiles/helperFunctions';
-
-
+import {countPercentScrolledSite, spyMenu} from '../helperFiles/helperFunctions';
 
 const Navigation = ({isMainActive}) => {
     const [scrollPercentage, setScrollPercentage] = useState(0);
-    spyMenuActive();
+    spyMenu('.section', '.navigation--link--container a', 'navLink--active');
 
     useEffect(()=> {
         window.addEventListener('scroll', handleScroll);
@@ -42,11 +40,11 @@ const Navigation = ({isMainActive}) => {
                     <p>Piotr Myszkiewicz</p>
                 </div>
                 <div className={`navigation--links--container ${isMainActive? 'in':''}`} >
-                    <div className="navigation--link--container"><a href="#header" onClick={scrollToSection}>Main</a></div>
-                    <div className="navigation--link--container"><a href="#projects" onClick={scrollToSection}>Projects</a></div>
-                    <div className="navigation--link--container"><a href="#stack" onClick={scrollToSection}>Stack</a></div>
-                    <div className="navigation--link--container"> <a href="#interests" onClick={scrollToSection}>Passion</a></div>
-                    <div className="navigation--link--container"><a href="#contact" onClick={scrollToSection}>Contact</a></div>
+                    <div  className="navigation--link--container"><a href="#header" data-key='0' onClick={scrollToSection}>Main</a></div>
+                    <div  className="navigation--link--container"><a href="#projects" data-key='1' onClick={scrollToSection}>Projects</a></div>
+                    <div data-key='2' className="navigation--link--container"><a data-key='2'href="#stack" onClick={scrollToSection}>Stack</a></div>
+                    <div data-key='3' className="navigation--link--container"><a data-key='3' href="#interests" onClick={scrollToSection}>Passion</a></div>
+                    <div data-key='4' className="navigation--link--container"><a data-key='4'href="#contact" onClick={scrollToSection}>Contact</a></div>
                 </div>
             </div>
         </nav>

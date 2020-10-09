@@ -4,3 +4,4 @@
 [0915/071551.714:ERROR:exception_snapshot_win.cc(99)] thread ID 6064 not found in process
 [0915/071551.714:ERROR:exception_snapshot_win.cc(99)] thread ID 13572 not found in process
 [0915/071551.714:ERROR:exception_snapshot_win.cc(99)] thread ID 10884 not found in process
+[1008/233020.801:ERROR:directory_reader_win.cc(43)] FindFirstFile: System nie mo¿e odnaleŸæ okreœlonej œcie¿ki. (0x3)
