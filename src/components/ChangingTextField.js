@@ -13,7 +13,7 @@ const ChangingTextField = ({text}) => {
                 <p>Technology: {text.tech}</p>
             </div>
             <div className="changingText--link">
-                <a href={text.gh}>GitHub</a>
+                <a href={`${text.gh}`}>GitHub</a>
             </div>
         </React.Fragment>
     );

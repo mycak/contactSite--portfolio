@@ -203,7 +203,7 @@
         font-size: .6em;
     }
     .changingText--desc, .changingText--tech {
-        font-size: .7em;
+        font-size: .8em;
     }
     .changingText--link a{
         text-decoration: none;
@@ -217,7 +217,7 @@
     }
     .changingText--desc, .changingText--tech {
         color: #fff;
-        font-size: .7em;
+        font-size: .8em;
     }
 }
 
