@@ -10,7 +10,7 @@ const Carousel = ({inOut}) => {
       arrows: false,
       dots: true,
       duration: 500,
-      shift: 10,
+      shift: 5,
       initialSlide: 3,
       accessibility: false,
       swipe: false
