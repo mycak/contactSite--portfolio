@@ -99,13 +99,17 @@
     transform: translateX(-400%);
 }
 
-.navigation--links--container a {
+.navigation--links--container button {
+    font-size: 1em;
     text-decoration: none;
+    background: transparent;
+    border: none;
     color: rgba(255, 255, 255, 0.671);
     font-weight: 400;
+    cursor: pointer;
 }
 
-a.navLink--active{
+button.navLink--active{
     font-weight: 900;
     color: #fff;
     text-shadow: 1px 1px rgb(255, 255, 255, .01);
