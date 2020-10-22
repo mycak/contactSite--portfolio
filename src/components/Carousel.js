@@ -22,7 +22,7 @@ const Carousel = () => {
               <div className="slide--photo slide--1">
               </div>
               <div className="slide--description">
-                <p>{interestSectionText[0]}</p>
+                <p>{interestSectionText[1]}</p>
               </div>
             </div>
           </div>
@@ -31,7 +31,7 @@ const Carousel = () => {
               <div className="slide--photo slide--2">
               </div>
               <div className="slide--description">
-                <p>{interestSectionText[1]}</p>
+                <p>{interestSectionText[0]}</p>
               </div>
             </div>
           </div>

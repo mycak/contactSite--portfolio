@@ -20,17 +20,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 70%;
-    height: 57vh;
+    height: 67vh;
 }
-
-.slide--1 { background-image: url('../helperFiles/images/passion-1.jpg');}
-.slide--2 { background-image: url('../helperFiles/images/passion-2.jpg');}
-.slide--3 { background-image: url('../helperFiles/images/passion-3.jpg');}
-
 .slide--description {
     color: #fff;
     width: 30%;
 }
+
+.slide--1 { background-image: url('../helperFiles/images/passion-2.jpg');}
+.slide--2 { background-image: url('../helperFiles/images/passion-1.jpg');}
+.slide--3 { background-image: url('../helperFiles/images/passion-3.jpg');}
+
+
 @media screen and (max-width: 800px) {
     .slide--container {
         min-width: 70vw;
