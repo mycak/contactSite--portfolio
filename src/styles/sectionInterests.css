@@ -25,7 +25,7 @@
 }
 
 .interests--wrapper {
-    margin-top: 2em;
+    padding-top: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,11 +62,11 @@
     opacity: 1;
 }
 @media (max-width: 1023px){
-    .mobile--background {
-        background-color: #000000;
+    .interests--leftside--container {
+        background: #000000;
     }
     .interests--carousel--wrapper {
-        margin-left: 1.5em;
+        margin-left: .5em;
         width: 85%;
         height: 70vh;
     }

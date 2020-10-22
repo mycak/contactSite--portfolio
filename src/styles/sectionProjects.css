@@ -148,7 +148,7 @@
 
 .section--projects--mobile {
     display: none;
-    padding-bottom: 2em;
+    margin-bottom: 10em;
 }
 
  @media screen and (max-width: 800px) {
