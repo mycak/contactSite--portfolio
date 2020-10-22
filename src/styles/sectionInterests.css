@@ -33,15 +33,12 @@
 
 .interests--title {
     margin-top: 4em;
-    padding-top: 1.2em;
-    height: 15vh;
+    padding-top: .5em;
+    height: 100%;
     text-align: center;
-    font-size: 2.5em;
+    font-size: clamp(2.1em, 4vw, 4em);
     opacity: 0;
     transition: all .5s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 .interests--title.active {
@@ -63,29 +60,10 @@
 .interests--carousel--wrapper.active.in {
     opacity: 1;
 }
-@media screen and (max-width: 767px) and (orientation: landscape){
-    .section--interests {
-        min-height: 200vh;
-    }
-}
-@media screen and (max-width: 767px) and (orientation: portrait){
-    .section--interests {
-        min-height: 140vh;
-        background: linear-gradient(0deg, rgba(0,0,0,1) -10%, rgb(44, 43, 43) 50%, rgba(0,0,0,1) 110%);
-    }
-    .interests--leftside--container {
-        background: linear-gradient(0deg, rgba(0,0,0,1) -10%, rgb(44, 43, 43) 50%, rgba(0,0,0,1) 110%);
-    }
-}
-@media screen and (max-width: 479px) and (orientation: landscape) {
-    .section--interests {
-      height: 160vh;
-    }
-  }
-
 @media (max-width: 1023px){
     .interests--carousel--wrapper {
         width: 90%;
+        height: 72vh;
     }
     .section--interests {
         max-width: 100%;

@@ -37,7 +37,7 @@
 }
 
 .projects--rightside--container h2, .projects--title--container h2{
-    font-size: clamp(2.4em, 6vw, 4em);
+    font-size: clamp(2.4em, 4vw, 4em);
 }
 
 .projects--pics--container {
@@ -116,14 +116,14 @@
 }
 
 .changingText--container p {
-    font-size: clamp(.95em, 1.4vw, 2em);
+    font-size: clamp(.95em, 1.2vw, 2em);
     color: #fff;
     margin-top: 4em;
     opacity: 0;
 }
 
 .changingText--container a {
-    font-size: clamp(.9em, 1.2vw, 2em);
+    font-size: clamp(.9em, 1.1vw, 2em);
     margin-top: 4em;
     display: inline-block;
     text-decoration: none;

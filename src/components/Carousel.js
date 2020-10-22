@@ -1,31 +1,28 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Slider from 'infinite-react-carousel';
 import '../styles/carousel.css';
+import { interestSectionText } from '../helperFiles/dataText';
 
-const Carousel = ({inOut}) => {
-    const carousel = useRef(null);
+const Carousel = () => {
     const settings =  {
       autoplay: false,
       autoplaySpeed: 5000,
       arrows: false,
       dots: true,
       duration: 500,
-      shift: 5,
+      shift: 115,
       initialSlide: 3,
       accessibility: false,
       swipe: false
     };
-    // if(caro.current){
-    //   inOut?caro.current.slickPause() : caro.current.slickPlay();
-    // }
     return (
-        <Slider { ...settings } ref={carousel}>
+        <Slider { ...settings }>
           <div>
             <div className="slide--container">
               <div className="slide--photo slide--1">
               </div>
               <div className="slide--description">
-                <p>Ex mollit cillum occaecat esse aliqua. Deserunt sit ex exercitation enim voluptate laboris ea quis. Consequat laboris ullamco mollit non nostrud laborum esse veniam pariatur incididunt occaecat. Non ea laborum amet nisi pariatur id elit culpa. Consequat fugiat fugiat elit amet laboris.</p>
+                <p>{interestSectionText[0]}</p>
               </div>
             </div>
           </div>
@@ -34,7 +31,7 @@ const Carousel = ({inOut}) => {
               <div className="slide--photo slide--2">
               </div>
               <div className="slide--description">
-                <p>Ex mollit cillum occaecat esse aliqua. Deserunt sit ex exercitation enim voluptate laboris ea quis. Consequat laboris ullamco mollit non nostrud laborum esse veniam pariatur incididunt occaecat. Non ea laborum amet nisi pariatur id elit culpa. Consequat fugiat fugiat elit amet laboris.</p>
+                <p>{interestSectionText[1]}</p>
               </div>
             </div>
           </div>
@@ -43,7 +40,7 @@ const Carousel = ({inOut}) => {
               <div className="slide--photo slide--3">
               </div>
               <div className="slide--description">
-                <p>Ex mollit cillum occaecat esse aliqua. Deserunt sit ex exercitation enim voluptate laboris ea quis. Consequat laboris ullamco mollit non nostrud laborum esse veniam pariatur incididunt occaecat. Non ea laborum amet nisi pariatur id elit culpa. Consequat fugiat fugiat elit amet laboris.</p>
+                <p>{interestSectionText[2]}</p>
               </div>
             </div>
           </div>

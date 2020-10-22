@@ -17,9 +17,10 @@
 }
 
 .contact--title {
+    width: 80%;
     opacity: 0;
     transform: translateY(100%);
-    font-size: 1.8em;
+    font-size: clamp(1.2em, 2.3vw, 4em);
     transition: all 1.5s;
 }
 
@@ -53,6 +54,7 @@
 }
 
 .footer--options p, .footer--signature p{
+    font-size: clamp(.9em, 1.2vw, 2em);
     font-weight: 900;
     margin-top: .5em;
 }
@@ -92,38 +94,18 @@
 }
 
 @media (min-width: 1680px){
-    .contact--title {
-        font-size: 2.2em;
-    }
-    .footer {
-        font-size: 1.2em;
-    }
     .footer--options {
         margin-left: 2em;
     }
 }
-
-@media (max-width: 1279px){
-    .contact--title {
-        font-size: 1.4em;
-    }
-}
-
-@media (max-width: 1024px){
+@media (max-width: 1023px){
     .section--contact {
         max-width: 100%;
-    }
-    .contact--title {
-        font-size: 1.5em;
-    }
-    .footer {
-        font-size: .9em;
     }
     .footer--signature {
         width: 35%;
     }
 }
-
 @media screen and (max-width: 767px) {
     .footer {
         flex-direction: column;
@@ -132,19 +114,5 @@
     .footer--options, .footer--signature{
         width: 100%;
         margin: 1em;
-    }
-    .contact--title {
-        font-size: 1.3em;
-        width: 90%;
-    }
-}
-
-
-@media screen and (max-width: 479px) {
-    .contact--title {
-        font-size: 1em;
-    }
-    .footer {
-        font-size: .8em;
     }
 }

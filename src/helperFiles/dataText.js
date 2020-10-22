@@ -63,3 +63,8 @@ export const stackSectionText = [
         p3: 'WEBPACK'
     },
 ]
+export const interestSectionText = [
+    'When I was a little boy but big enough, I’ve started my journey with football. Since then I have ups and downs in this area but I’ve never give up. Even when my club closed, I was still looking for opportunities to play. Football means for me teamwork, dedication and the passion, that’s tree think that are the most important in my life.',
+    'In 2018 was a breakthrough in my life. I’ve a pleasure to meet a little creature that turned everything upside down – my son. When I meet him, I fall crazy in love and I decided to be the best father he could ever have. I decided to quite my job and make my programming dream come true.',
+    'I was always a dreamer curie of the world. Journeys are the big part of my life and they are essence of it. I believe that someday I will be able to say that I have visited all countries of the world.'
+]

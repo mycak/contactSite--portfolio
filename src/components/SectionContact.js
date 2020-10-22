@@ -17,7 +17,7 @@ const SectionContact = () => {
         if(window.scrollY > section.current.offsetTop - .5*section.current.offsetHeight) {
             setIsActiveTitle(true);
         } else {setIsActiveTitle(false)};
-        if(window.scrollY > section.current.offsetTop - .3*section.current.offsetHeight) {
+        if(window.scrollY > section.current.offsetTop - .2*section.current.offsetHeight) {
             setIsActiveFooter(true);
         } else {setIsActiveFooter(false)}
     }

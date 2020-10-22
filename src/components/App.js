@@ -31,7 +31,7 @@ const App = () => {
                 <Header isMainActive={mainActive}/>
                 <Navigation isMainActive={mainActive} />
                 <SectionProjects />
-                <SectionStack />
+                {/* <SectionStack /> */}
                 <SectionInterests />
                 <SectionContact />
                 <MobileNavigation isMainActive={mainActive}/>
