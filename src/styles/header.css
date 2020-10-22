@@ -62,7 +62,7 @@
   opacity: 0;
   color: rgb(255, 255, 255, .7);
   transform: translateX(-8%);
-  font-size: clamp(.8rem, 1.2vw, 4rem);;
+  font-size: clamp(.8rem, 1.2vw, 4rem);
 }
 
 .header--pic--container {
@@ -173,6 +173,7 @@
   }
   .header--text--container {
     margin-left: .5em;
+    width: 50%;
   }
 }
  @media screen and (max-width: 600px) {

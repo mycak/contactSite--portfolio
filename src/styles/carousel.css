@@ -1,4 +1,5 @@
 .carousel-dots li button:before {
+    margin-top: -.5em;
     color:#fff;
 }
 
@@ -8,7 +9,6 @@
 }
 
 .slide--container {
-    margin-top: 1em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,9 +20,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 70%;
-    height: 67vh;
+    height: 60vh;
 }
 .slide--description {
+    font-size: clamp(.8rem, 1.2vw, 4rem);
     color: #fff;
     width: 30%;
 }
@@ -42,7 +43,6 @@
         text-align: center;
         margin-top: 1em;
         width: 87%;
-        font-size: .9em;
     }
     .slide--photo {
         margin-right: 0;
