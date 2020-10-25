@@ -13,7 +13,8 @@ const Carousel = () => {
       shift: 350,
       initialSlide: 3,
       accessibility: false,
-      swipe: false
+      swipe: false,
+      wheel: true
     };
     return (
         <Slider { ...settings }>
