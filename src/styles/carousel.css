@@ -28,9 +28,9 @@
     width: 30%;
 }
 
-.slide--1 { background-image: url('../helperFiles/images/passion-2.jpg');}
+.slide--1 { background-image: url('https://i.ibb.co/S0dCccD/passion-2.jpg');}
 .slide--2 { background-image: url('../helperFiles/images/passion-1.jpg');}
-.slide--3 { background-image: url('https://i.ibb.co/S0dCccD/passion-2.jpg');}
+.slide--3 { background-image: url('../helperFiles/images/passion-3.jpg');}
 
 
 @media screen and (max-width: 800px) {
