@@ -14,7 +14,7 @@ const Carousel = () => {
       initialSlide: 3,
       accessibility: false,
       swipe: false,
-      wheel: true
+      wheel: false
     };
     return (
         <Slider { ...settings }>
