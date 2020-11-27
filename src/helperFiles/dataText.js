@@ -18,10 +18,10 @@ export const projectSectionText = [
         gh: 'https://mycak.github.io/budget-app-vanillaJS/'
     },
     {
-        header: 'Portfolio site',
-        desc: 'The page that serves for portfolio and contact site with clients. This is react application with tons of CSS and uses many tidy animations. Entire App is made with React Hooks. ',
-        tech: 'React, Hooks',
-        gh: 'google.com'
+        header: 'Image searcher',
+        desc: 'Image searcher using Unsplash API with pure pagination',
+        tech: 'React, Redux Thunk, Redux Persist, API, Hooks',
+        gh: 'https://github.com/mycak/Image-searcher-unsplash-api-react-redux'
     }
 ];
 

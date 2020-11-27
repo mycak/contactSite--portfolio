@@ -3,7 +3,7 @@ import '../styles/sectionProjects.css';
 import img1 from '../helperFiles/images/proj-1.jpg';
 import img2 from '../helperFiles/images/proj-2.jpeg';
 import img3 from '../helperFiles/images/proj-3.jpeg';
-import img4 from '../helperFiles/images/proj-4.jpeg';
+import img4 from '../helperFiles/images/proj--4.png';
 import { projectSectionText } from '../helperFiles/dataText';
 import ChangingTextField from './ChangingTextField';
 import { useDebouncedCallback } from 'use-lodash-debounce';
