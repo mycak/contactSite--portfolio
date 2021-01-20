@@ -1,5 +1,29 @@
 export const projectSectionText = [
     {
+        header: 'Image searcher',
+        desc: 'Image searcher using Unsplash API with pure pagination',
+        tech: 'React, Redux Thunk, Redux Persist, API, Hooks',
+        gh: 'https://github.com/mycak/Image-searcher-unsplash-api-react-redux'
+    },
+    {
+        header: 'ElToro - website',
+        desc: 'Site of musican and artist El Toro - gallery, contact form and descriptions.',
+        tech: 'React, Gatsby, Gsap',
+        gh: 'https://hopeful-bassi-ed99b4.netlify.app/'
+    },
+    {
+        header: 'Drones Store',
+        desc: 'Complete Drones Store with authorization and possibility to managing items. E-commerce.',
+        tech: 'React, Next, Prisma, Yoga, Apollo, GraphQl',
+        gh: 'https://dron-next.herokuapp.com/'
+    },
+    {
+        header: 'Pizza Store',
+        desc: 'Pizza Store based on WesBos Course',
+        tech: 'React, Gatsby, GraphQl',
+        gh: 'https://gifted-heisenberg-275c36.netlify.app/'
+    },
+    {
         header: 'Streamy app',
         desc: 'With this application You can create and share stream to each oder. You can also menage all yours streams and watch streams of anybody else. Streams You can create with OBS. Sign up use Google Authorization. ',
         tech: 'React, Redux, Router, REST API',
@@ -17,12 +41,7 @@ export const projectSectionText = [
         tech: 'Vanilla JS, IIFE',
         gh: 'https://mycak.github.io/budget-app-vanillaJS/'
     },
-    {
-        header: 'Image searcher',
-        desc: 'Image searcher using Unsplash API with pure pagination',
-        tech: 'React, Redux Thunk, Redux Persist, API, Hooks',
-        gh: 'https://github.com/mycak/Image-searcher-unsplash-api-react-redux'
-    }
+    
 ];
 
 export const stackSectionText = [

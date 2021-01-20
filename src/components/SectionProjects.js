@@ -4,12 +4,15 @@ import img1 from '../helperFiles/images/proj-1.jpg';
 import img2 from '../helperFiles/images/proj-2.jpeg';
 import img3 from '../helperFiles/images/proj-3.jpeg';
 import img4 from '../helperFiles/images/proj--4.png';
+import img5 from '../helperFiles/images/np1.png';
+import img6 from '../helperFiles/images/np2.png';
+import img7 from '../helperFiles/images/np3.png';
 import { projectSectionText } from '../helperFiles/dataText';
 import ChangingTextField from './ChangingTextField';
 import { useDebouncedCallback } from 'use-lodash-debounce';
 
 const SectionProjects = () => {
-    const images = [img1, img2, img3, img4];
+    const images = [img4, img5, img6, img7, img1, img2, img3];
     const [activeText, setActiveText] = useState('projectSectionText[1]');
     const [isSectionActive, setIsSectionActive] = useState(false);
     const [isTextActive, SetIsTextActive] = useState(false);
@@ -99,17 +102,26 @@ const SectionProjects = () => {
                         <h2>Projects</h2>
                     </div>
                     <div className="projects--pics--container" ref={picturesContainer}>
-                        <div className={`projects--pic--container ${isActiveText}`} data-id="0" ref={firstPic} >
+                        <div className={`projects--pic--container ${isActiveText}`} data-id="3" ref={firstPic}>
+                            <img src={img4} alt="proj"></img>
+                        </div>
+                        <div className={`projects--pic--container ${isActiveText}`} data-id="4">
+                            <img src={img5} alt="proj"></img>
+                        </div>
+                        <div className={`projects--pic--container ${isActiveText}`} data-id="5">
+                            <img src={img6} alt="proj"></img>
+                        </div>
+                        <div className={`projects--pic--container ${isActiveText}`} data-id="6">
+                            <img src={img7} alt="proj"></img>
+                        </div>
+                        <div className={`projects--pic--container ${isActiveText}`} data-id="0">
                             <img src={img1} alt="proj"></img>
                         </div>
                         <div className={`projects--pic--container ${isActiveText}`} data-id="1">
                             <img src={img2} alt="proj"></img>
                         </div>
-                        <div className={`projects--pic--container ${isActiveText}`} data-id="2">
+                        <div className={`projects--pic--container ${isActiveText}`} data-id="2" ref={lastPic}>
                             <img src={img3} alt="proj"></img>
-                        </div>
-                        <div className={`projects--pic--container ${isActiveText}`} data-id="3" ref={lastPic}>
-                            <img src={img4} alt="proj"></img>
                         </div>
                     </div>
                 </div>
